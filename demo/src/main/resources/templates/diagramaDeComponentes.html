@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Wiki del Equipo</title>
+    <meta name="description" content="Desarrollo Web - Universidad Javeriana - 2024-1 - Bogotá - Colombia">
+
+    <link rel="shortcut icon" href="favicon.ico">
+
+    <!-- External stylesheets -->
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/html5-boilerplate.css">
+    <link rel="stylesheet" href="css/main.css">
+
+    <!-- Custom styles -->
+    <style th:inline="text">
+        body {
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #3498db;
+            color: #ecf0f1;
+            padding: 20px;
+            text-align: center;
+        }
+
+        h1, h2, h3 {
+            color: #3498db;
+        }
+
+        section {
+            margin: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        li {
+            margin-bottom: 10px;
+        }
+
+        button {
+            background-color: #2ecc71;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        footer {
+            background-color: #34495e;
+            color: #ecf0f1;
+            padding: 10px;
+            text-align: center;
+        }
+
+        /* Your custom CSS styles for smartphones and screens smaller than 480 px */
+        @media only screen and (max-width: 480px) {
+            body {
+                font-size: 14px;
+            }
+
+            header {
+                padding: 10px;
+            }
+
+            section {
+                margin: 10px;
+            }
+
+            footer {
+                padding: 5px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Encabezado -->
+    <header>
+        <h1>Bienvenid@ a nuestra Wiki</h1>
+        <p>Desarrollo web - Universidad Javeriana.</p>
+    </header>
+
+    <!-- Sección de presentación del equipo -->
+    <section>
+        <h2>Diagrama de componentes</h2>
+
+        <img src="images/DiagramaDeComponentes.png" alt="Diagrama de Componentes Image">
+
+    </section>
+
+    <!-- Pie de página -->
+    <footer>
+        <p>&copy; 2024 Grupo 7 - clase martes y jueves - 6:00PM - 8:00PM</p>
+    </footer>
+
+    <!-- Scripts y jQuery -->
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script th:inline="javascript">
+        /* You can use Thymeleaf syntax for JavaScript variables if needed */
+        window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2.min.js"><\/script>')
+    </script>
+    <script src="js/plugins.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>

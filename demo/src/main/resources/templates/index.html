@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 
 <head>
     <meta charset="utf-8">
@@ -17,7 +17,7 @@
     <link rel="stylesheet" href="css/main.css">
 
     <!-- Custom styles -->
-    <style>
+    <style th:inline="text">
         body {
             font-family: 'Helvetica Neue', Arial, sans-serif;
             background-color: #f4f4f4;
@@ -27,18 +27,22 @@
         }
 
         header {
-            background-color: #2c3e50;
+            background-color: #3498db;
             color: #ecf0f1;
             padding: 20px;
             text-align: center;
         }
 
         h1, h2, h3 {
-            color: #2c3e50;
+            color: #3498db;
         }
 
         section {
             margin: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
         }
 
         ul {
@@ -48,6 +52,15 @@
 
         li {
             margin-bottom: 10px;
+        }
+
+        button {
+            background-color: #2ecc71;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
         }
 
         footer {
@@ -87,86 +100,139 @@
     </header>
 
     <!-- Sección de presentación del equipo -->
-    <section>
-        <h2>Página de presentación del equipo</h2>
-        <!-- Textos realizados por el equipo -->
-        <!-- Nombre del equipo -->
-        <h3>Grupo 5</h3>
-        <p>Arrienda tu Finca: Desarrollo de frontend, backend y base de datos.</p>
+<section>
+    <h2>Página de presentación del equipo</h2>
+    <!-- Textos realizados por el equipo -->
+    <!-- Nombre del equipo -->
+    <h3>Grupo 5</h3>
+    <p>Arrienda tu Finca: Desarrollo de frontend, backend y base de datos.</p>
 
-        <!-- Listado de integrantes -->
-        <h3>Listado de Integrantes</h3>
-        <ul>
-            <li> Andrés Felipe Vaca Lago - Sexto semestre (Ingeniería de sistemas)</li>
-            <li> Felipe Londoño Campos - Sexto semestre (Ingeniería de sistemas)</li>
-        </ul>
-    </section>
+    <!-- Listado de integrantes -->
+    <h3>Listado de Integrantes</h3>
+    <ul>
+        <li th:text="${integrante1}">Andrés Felipe Vaca Lago - Sexto semestre (Ingeniería de sistemas)</li>
+        <li th:text="${integrante2}">Felipe Londoño Campos - Sexto semestre (Ingeniería de sistemas)</li>
+    </ul>
+</section>
 
-    <!-- Sección de descripción del proyecto -->
-    <section>
-        <h2>Descripción del Proyecto</h2>
-        <!-- Textos realizados por el profesor y complementados por el equipo -->
-        <!-- Requerimientos -->
-        <h3>Requerimientos</h3>
-        <h4>Funcionales</h4>
-        <p>Texto de requerimientos funcionales.</p>
-        <h4>No Funcionales</h4>
-        <p>Texto de requerimientos no funcionales.</p>
+<!-- Sección de descripción del proyecto -->
+<section>
+    <h2>Descripción del Proyecto</h2>
+    <!-- Textos realizados por el profesor y complementados por el equipo -->
+    <ul>
+        <li th:text="${integrante1}">Para el desarrollo de esta aplicación, se deben considerar dos perfiles de usuarios principales: el “Usuario Arrendatario” y el “Usuario Arrendador”.
 
-        <!-- Arquitectura del proyecto -->
-        <h3>Arquitectura del Proyecto</h3>
-        <!-- Textos realizados por el profesor y complementados por el equipo -->
-        <h4>Diagramas de Referencia C4</h4>
-        <p>Texto del diagrama de referencia C4.</p>
-        <!-- Agrega aquí los demás diagramas solicitados -->
-    </section>
+            El “Usuario Arrendatario” tendrá la capacidad de realizar una variedad de acciones relacionadas con la gestión de propiedades y la interacción con otros usuarios. Entre estas acciones se incluyen la creación, edición, eliminación y actualización de propiedades disponibles para arrendamiento. Además, este usuario será responsable de revisar y responder a todas las solicitudes de arrendamiento recibidas, teniendo la opción de aceptarlas o cancelarlas según corresponda. También será su responsabilidad verificar los pagos realizados por los arrendadores y proporcionar calificaciones y comentarios sobre la experiencia de arrendamiento.
+            
+            Por otro lado, el “Usuario Arrendador” tendrá un conjunto diferente de funcionalidades diseñadas para facilitar el proceso de búsqueda y arrendamiento de propiedades. Este usuario podrá buscar fincas disponibles filtradas por ubicación geográfica, así como solicitar el arrendamiento de una finca específica. Una vez que se apruebe la solicitud, el arrendador podrá realizar el pago correspondiente del arriendo y, posteriormente, calificar tanto la finca arrendada como al arrendatario.
+            
+            La implementación de esta aplicación requerirá la integración de un sistema de autenticación y autorización robusto para gestionar los diferentes roles y permisos de los usuarios. Además, se necesitarán interfaces de usuario intuitivas y funcionales que permitan a los usuarios interactuar de manera efectiva con la plataforma.
+            
+            El flujo de trabajo para el “Usuario Arrendatario” implicará la gestión activa de las propiedades disponibles, la revisión y respuesta a las solicitudes de arrendamiento, así como el seguimiento de los pagos realizados y la provisión de retroalimentación sobre las experiencias de arrendamiento. Por otro lado, el “Usuario Arrendador” estará enfocado en la búsqueda y arrendamiento de propiedades, así como en la gestión de los pagos y la calificación de la experiencia general.
+            
+            En resumen, el desarrollo de esta aplicación requerirá una planificación detallada y un enfoque centrado en el usuario para garantizar una experiencia fluida y satisfactoria para todos los usuarios involucrados. La implementación exitosa de esta plataforma requerirá una cuidadosa consideración de las necesidades y expectativas tanto de los arrendatarios como de los arrendadores.)</li>
+    </ul>
+    <!-- Requerimientos -->
+    <h3>Requerimientos</h3>
+    <h4>Funcionales</h4>
+    <!-- Button -->
+    <button type="button" th:onclick="alert('Button Clicked!')">Click me</button>
 
-    <!-- Sección de desarrollo -->
-    <section>
-        <h2>Para Desarrollo</h2>
-        <!-- Textos realizados por el equipo -->
-        <!-- Descripciones de endpoints -->
-        <h3>Descripciones de Endpoints</h3>
-        <p>Texto de descripciones de endpoints.</p>
-    </section>
+    <h4>No Funcionales</h4>
+    <!-- Button -->
+    <button type="button" th:onclick="alert('Button Clicked!')">Click me</button>
 
-    <!-- Sección de pruebas -->
-    <section>
-        <h2>Pruebas</h2>
-        <!-- Textos realizados por el equipo -->
-        <!-- Casos de pruebas frontend y backend -->
-        <h3>Casos de Pruebas Frontend</h3>
-        <p>Texto de casos de pruebas frontend.</p>
-        <h3>Casos de Pruebas Backend</h3>
-        <p>Texto de casos de pruebas backend.</p>
-    </section>
+    <!-- Arquitectura del proyecto -->
+    <h3>Arquitectura del Proyecto</h3>
+    <!-- Textos realizados por el profesor y complementados por el equipo -->
+    <h4>Diagrama de contexto </h4>
+    <!-- Button -->
+    <button type="button" th:onclick="alert('Button Clicked!')">Click me</button>
+    <h4>Diagramas de contenedor </h4>
+    <!-- Button -->
+    <button type="button" th:onclick="alert('Button Clicked!')">Click me</button>
+    <h4>Diagrama de componentes </h4>
+    <!-- Button -->
+    <button type="button" th:onclick="alert('Button Clicked!')">Click me</button>
+        <!-- Modelos -->
+        <h3>Entidad/Relación: Diccionario</h3>
+         <!-- Textos realizados por el profesor y complementados por el equipo -->
+    <h4>Diagrama de contexto </h4>
+    <!-- Button -->
+    <button type="button" th:onclick="alert('Button Clicked!')">Click me</button>
+</section>
 
-    <!-- Sección de despliegue -->
-    <section>
-        <h2>Despliegue</h2>
-        <!-- Textos realizados por el equipo -->
-        <!-- Versiones y formulario de contáctenos -->
-        <h3>Versiones</h3>
-        <p>Texto de versiones.</p>
-        <h3>Formulario de Contáctenos</h3>
-        <!-- Formulario con Thymeleaf -->
-        <form action="#" method="post">
-            <!-- Agrega aquí los campos del formulario con Thymeleaf y las validaciones mencionadas -->
-        </form>
-    </section>
+<!-- Sección de desarrollo -->
+<section>
+    <h2>Para Desarrollo</h2>
+    <!-- Textos realizados por el equipo -->
+    <!-- Descripciones de endpoints -->
+    <h3>Descripciones de Endpoints</h3>
+    <!-- Button -->
+    <button type="button" th:onclick="alert('Button Clicked!')">Click me</button>
+</section>
 
-    <!-- Pie de página -->
-    <footer>
-        <p>&copy; 2024 Tu Nombre</p>
-    </footer>
+<!-- Sección de pruebas -->
+<section>
+    <h2>Pruebas</h2>
+    <!-- Textos realizados por el equipo -->
+    <!-- Casos de pruebas frontend y backend -->
+    <h3>Casos de Pruebas Frontend</h3>
+    <!-- Button -->
+    <button type="button" th:onclick="alert('Button Clicked!')">Click me</button>
+    <h3>Casos de Pruebas Backend</h3>
+    <!-- Button -->
+    <button type="button" th:onclick="alert('Button Clicked!')">Click me</button>
+</section>
 
-    <!-- Scripts y jQuery -->
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-    <script>
-        window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2.min.js"><\/script>')
-    </script>
-    <script src="js/plugins.js"></script>
-    <script src="js/main.js"></script>
+<!-- Sección de despliegue -->
+<section>
+    <h2>Despliegue</h2>
+    <!-- Textos realizados por el equipo -->
+    <!-- Versiones y formulario de contáctenos -->
+    <h3>Versiones</h3>
+    <!-- Button -->
+    <button type="button" th:onclick="alert('Button Clicked!')">Click me</button>
+    <h3>Formulario de Contáctenos</h3>
+    <!-- Formulario con Thymeleaf -->
+    <form action="#" method="post">
+        <div>
+            <label for="nombres">Nombres:</label>
+            <input type="text" id="nombres" name="nombres" required maxlength="100" th:maxlength="100" />
+        </div>
+        <div>
+            <label for="apellidos">Apellidos:</label>
+            <input type="text" id="apellidos" name="apellidos" required maxlength="100" th:maxlength="100" />
+        </div>
+        <div>
+            <label for="correo">Correo:</label>
+            <input type="email" id="correo" name="correo" required pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$" />
+        </div>
+        <div>
+            <label for="semestre">Semestre:</label>
+            <input type="number" id="semestre" name="semestre" required min="0" max="16" />
+        </div>
+        <div>
+            <label for="descripcion">Descripción:</label>
+            <textarea id="descripcion" name="descripcion" required></textarea>
+        </div>
+        <button type="submit">Enviar</button>
+    </form>
+</section>
+
+<!-- Pie de página -->
+<footer>
+    <p>&copy; 2024 Grupo 7 - clase martes y jueves - 6:00PM - 8:00PM</p>
+</footer>
+
+<!-- Scripts y jQuery -->
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script th:inline="javascript">
+    /* You can use Thymeleaf syntax for JavaScript variables if needed */
+    window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2.min.js"><\/script>')
+</script>
+<script src="js/plugins.js"></script>
+<script src="js/main.js"></script>
 </body>
 
 </html>
