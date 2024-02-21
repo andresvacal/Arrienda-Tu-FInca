@@ -1,4 +1,4 @@
-package com.example.grupox.demo.repository;
+package Repository;
 
 
 import org.springframework.data.repository.CrudRepository;
