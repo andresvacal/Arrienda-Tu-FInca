@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 @Controller
 public class WebController {
-    @GetMapping(value = "/wiki")
+    @GetMapping(value = "/grupo271")
     @ResponseBody
     public String welcomeAsHTML() {
         return "template";
