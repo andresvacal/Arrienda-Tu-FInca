@@ -70,7 +70,6 @@
             text-align: center;
         }
 
-        /* Your custom CSS styles for smartphones and screens smaller than 480 px */
         @media only screen and (max-width: 480px) {
             body {
                 font-size: 14px;
@@ -139,9 +138,30 @@
     <!-- Requerimientos -->
     <h3>Requerimientos</h3>
     <h4>Funcionales</h4>
-    <!-- Button -->
-    <button type="button" th:onclick="alert('Button Clicked!')">Click me</button>
-
+    <!-- boton funcionales* -->
+    <button type="button" onclick="makeGetRequest()">Click me</button>
+    <div id="response-container"></div>
+    
+    <script th:inline="javascript">
+        function makeGetRequest() {
+            var xhr = new XMLHttpRequest();
+            var url = "https://gruposjaveriana.dynaco.co/grupo27/grupo27/reqfuncionales";
+    
+            xhr.open('GET', url, true);
+    
+            xhr.onload = function () {
+                if (xhr.status >= 200 && xhr.status < 300) {
+                    // Display the HTML response in the response-container
+                    document.getElementById('response-container').innerHTML = xhr.responseText;
+                } else {
+                    console.error('Request failed with status', xhr.status);
+                }
+            };
+    
+            xhr.send();
+        }
+    </script>
+    
     <h4>No Funcionales</h4>
     <!-- Button -->
     <button type="button" th:onclick="alert('Button Clicked!')">Click me</button>

@@ -14,9 +14,9 @@ public class DemoApplication {
 		public static void main(String[] args) {
 		SpringApplication.run(DemoApplication.class, args);
 	}
-    @GetMapping(value = "/grupo27")
+   /*  @GetMapping(value = "/grupo27")
 	public String welcome() {
 		return "index";
-	}
+	}*/
 
 }
