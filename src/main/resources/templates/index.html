@@ -139,13 +139,13 @@
     <h3>Requerimientos</h3>
     <h4>Funcionales</h4>
     <!-- boton funcionales* -->
-    <button type="button" onclick="makeGetRequest()">Click me</button>
+    <button type="button" onclick="toggleGetRequest()">Click me</button>
     <div id="response-container"></div>
     
     <script th:inline="javascript">
-        function makeGetRequest() {
+        function toggleGetRequest() {
             var xhr = new XMLHttpRequest();
-            var url = "https://gruposjaveriana.dynaco.co/grupo27/reqfuncionales";
+            var url = "http://localhost:8080/grupo27/reqfuncionales";
     
             xhr.open('GET', url, true);
     
@@ -155,7 +155,7 @@
                     document.getElementById('response-container').innerHTML = xhr.responseText;
     
                     // Navigate to the received HTML
-                    window.location.href = "data:text/html;charset=utf-8," + escape(xhr.responseText);
+                    window.location.href = url;
                 } else {
                     console.error('Request failed with status', xhr.status);
                 }
@@ -164,6 +164,9 @@
             xhr.send();
         }
     </script>
+    
+
+
     
     
     <h4>No Funcionales</h4>
