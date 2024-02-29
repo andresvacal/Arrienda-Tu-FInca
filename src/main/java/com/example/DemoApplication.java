@@ -1,12 +1,11 @@
 
-package com.example.grupox.demo;
+package com.example;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
-
 @SpringBootApplication
 @Controller
 public class DemoApplication {
@@ -14,9 +13,9 @@ public class DemoApplication {
 		public static void main(String[] args) {
 		SpringApplication.run(DemoApplication.class, args);
 	}
-   /*  @GetMapping(value = "/grupo27")
+     @GetMapping(value = "/grupo27")
 	public String welcome() {
 		return "index";
-	}*/
+	}
 
 }

@@ -139,13 +139,13 @@
     <h3>Requerimientos</h3>
     <h4>Funcionales</h4>
     <!-- boton funcionales* -->
-    <button type="button" onclick="toggleGetRequest()">Click me</button>
+    <button type="button" onclick="toggleGetRequest()">Abrir</button>
     <div id="response-container"></div>
     
     <script th:inline="javascript">
         function toggleGetRequest() {
             var xhr = new XMLHttpRequest();
-            var url = "http://localhost:8080/grupo27/reqfuncionales";
+            var url = "https://gruposjaveriana.dynaco.co/grupo27/reqfuncionales";
     
             xhr.open('GET', url, true);
     
@@ -165,32 +165,146 @@
         }
     </script>
     
-
-
-    
-    
     <h4>No Funcionales</h4>
-    <!-- Button -->
-    <button type="button" th:onclick="alert('Button Clicked!')">Click me</button>
-
+    <!-- Boton No funcionales -->
+    <button type="button" onclick="toggleGetRequest()">Abrir</button>
+    <div id="response-container"></div>
+    
+    <script th:inline="javascript">
+        function toggleGetRequest() {
+            var xhr = new XMLHttpRequest();
+            var url = "https://gruposjaveriana.dynaco.co/grupo27/reqnofuncionales";
+    
+            xhr.open('GET', url, true);
+    
+            xhr.onload = function () {
+                if (xhr.status >= 200 && xhr.status < 300) {
+                    // Set the received HTML to the response-container
+                    document.getElementById('response-container').innerHTML = xhr.responseText;
+    
+                    // Navigate to the received HTML
+                    window.location.href = url;
+                } else {
+                    console.error('Request failed with status', xhr.status);
+                }
+            };
+    
+            xhr.send();
+        }
+    </script>
     <!-- Arquitectura del proyecto -->
     <h3>Arquitectura del Proyecto</h3>
     <!-- Textos realizados por el profesor y complementados por el equipo -->
     <h4>Diagrama de contexto </h4>
-    <!-- Button -->
-    <button type="button" th:onclick="alert('Button Clicked!')">Click me</button>
+    <!-- Boton diagrama de contexto -->
+    <button type="button" onclick="toggleGetRequest()">Abrir</button>
+    <div id="response-container"></div>
+    
+    <script th:inline="javascript">
+        function toggleGetRequest() {
+            var xhr = new XMLHttpRequest();
+            var url = "https://gruposjaveriana.dynaco.co/grupo27/diagrama/contexto";
+    
+            xhr.open('GET', url, true);
+    
+            xhr.onload = function () {
+                if (xhr.status >= 200 && xhr.status < 300) {
+                    // Set the received HTML to the response-container
+                    document.getElementById('response-container').innerHTML = xhr.responseText;
+    
+                    // Navigate to the received HTML
+                    window.location.href = url;
+                } else {
+                    console.error('Request failed with status', xhr.status);
+                }
+            };
+    
+            xhr.send();
+        }
+    </script>
     <h4>Diagramas de contenedor </h4>
-    <!-- Button -->
-    <button type="button" th:onclick="alert('Button Clicked!')">Click me</button>
+    <!-- Boton Diagrama de contenedor -->
+    <button type="button" onclick="toggleGetRequest()">Abrir</button>
+    <div id="response-container"></div>
+    
+    <script th:inline="javascript">
+        function toggleGetRequest() {
+            var xhr = new XMLHttpRequest();
+            var url = "https://gruposjaveriana.dynaco.co/grupo27/diagrama/contenedor";
+    
+            xhr.open('GET', url, true);
+    
+            xhr.onload = function () {
+                if (xhr.status >= 200 && xhr.status < 300) {
+                    // Set the received HTML to the response-container
+                    document.getElementById('response-container').innerHTML = xhr.responseText;
+    
+                    // Navigate to the received HTML
+                    window.location.href = url;
+                } else {
+                    console.error('Request failed with status', xhr.status);
+                }
+            };
+    
+            xhr.send();
+        }
+    </script>
     <h4>Diagrama de componentes </h4>
-    <!-- Button -->
-    <button type="button" th:onclick="alert('Button Clicked!')">Click me</button>
-        <!-- Modelos -->
+    <!-- Boton diagrama de componentes -->
+    <button type="button" onclick="toggleGetRequest()">Abrir</button>
+    <div id="response-container"></div>
+    
+    <script th:inline="javascript">
+        function toggleGetRequest() {
+            var xhr = new XMLHttpRequest();
+            var url = "https://gruposjaveriana.dynaco.co/grupo27/diagrama/componentes";
+    
+            xhr.open('GET', url, true);
+    
+            xhr.onload = function () {
+                if (xhr.status >= 200 && xhr.status < 300) {
+                    // Set the received HTML to the response-container
+                    document.getElementById('response-container').innerHTML = xhr.responseText;
+    
+                    // Navigate to the received HTML
+                    window.location.href = url;
+                } else {
+                    console.error('Request failed with status', xhr.status);
+                }
+            };
+    
+            xhr.send();
+        }
+    </script>        <!-- Modelos -->
         <h3>Entidad/Relación: Diccionario</h3>
          <!-- Textos realizados por el profesor y complementados por el equipo -->
     <h4>Diagrama de contexto </h4>
-    <!-- Button -->
-    <button type="button" th:onclick="alert('Button Clicked!')">Click me</button>
+    <!-- boton diagrama de contexto -->
+    <button type="button" onclick="toggleGetRequest()">Abrir</button>
+    <div id="response-container"></div>
+    
+    <script th:inline="javascript">
+        function toggleGetRequest() {
+            var xhr = new XMLHttpRequest();
+            var url = "https://gruposjaveriana.dynaco.co/grupo27/diagrama/entidad";
+    
+            xhr.open('GET', url, true);
+    
+            xhr.onload = function () {
+                if (xhr.status >= 200 && xhr.status < 300) {
+                    // Set the received HTML to the response-container
+                    document.getElementById('response-container').innerHTML = xhr.responseText;
+    
+                    // Navigate to the received HTML
+                    window.location.href = url;
+                } else {
+                    console.error('Request failed with status', xhr.status);
+                }
+            };
+    
+            xhr.send();
+        }
+    </script>      
 </section>
 
 <!-- Sección de desarrollo -->
@@ -200,7 +314,33 @@
     <!-- Descripciones de endpoints -->
     <h3>Descripciones de Endpoints</h3>
     <!-- Button -->
-    <button type="button" th:onclick="alert('Button Clicked!')">Click me</button>
+    <!-- boton diagrama de contexto -->
+    <button type="button" onclick="toggleGetRequest()">Abrir</button>
+    <div id="response-container"></div>
+    
+    <script th:inline="javascript">
+        function toggleGetRequest() {
+            var xhr = new XMLHttpRequest();
+            var url = "https://gruposjaveriana.dynaco.co/grupo27/endpoints";
+    
+            xhr.open('GET', url, true);
+    
+            xhr.onload = function () {
+                if (xhr.status >= 200 && xhr.status < 300) {
+                    // Set the received HTML to the response-container
+                    document.getElementById('response-container').innerHTML = xhr.responseText;
+    
+                    // Navigate to the received HTML
+                    window.location.href = url;
+                } else {
+                    console.error('Request failed with status', xhr.status);
+                }
+            };
+    
+            xhr.send();
+        }
+    </script>      
+</section>
 </section>
 
 <!-- Sección de pruebas -->
@@ -209,12 +349,59 @@
     <!-- Textos realizados por el equipo -->
     <!-- Casos de pruebas frontend y backend -->
     <h3>Casos de Pruebas Frontend</h3>
-    <!-- Button -->
-    <button type="button" th:onclick="alert('Button Clicked!')">Click me</button>
+    <!-- Boton pruebas front -->
+    <button type="button" onclick="toggleGetRequest()">Abrir</button>
+    <div id="response-container"></div>
+    
+    <script th:inline="javascript">
+        function toggleGetRequest() {
+            var xhr = new XMLHttpRequest();
+            var url = "https://gruposjaveriana.dynaco.co/grupo27/pruebas/frontend";
+    
+            xhr.open('GET', url, true);
+    
+            xhr.onload = function () {
+                if (xhr.status >= 200 && xhr.status < 300) {
+                    // Set the received HTML to the response-container
+                    document.getElementById('response-container').innerHTML = xhr.responseText;
+    
+                    // Navigate to the received HTML
+                    window.location.href = url;
+                } else {
+                    console.error('Request failed with status', xhr.status);
+                }
+            };
+    
+            xhr.send();
+        }
+    </script>
     <h3>Casos de Pruebas Backend</h3>
-    <!-- Button -->
-    <button type="button" th:onclick="alert('Button Clicked!')">Click me</button>
-</section>
+    <!-- Boton casos de prueba backend -->
+    <button type="button" onclick="toggleGetRequest()">Abrir</button>
+    <div id="response-container"></div>
+    
+    <script th:inline="javascript">
+        function toggleGetRequest() {
+            var xhr = new XMLHttpRequest();
+            var url = "https://gruposjaveriana.dynaco.co/grupo27/pruebas/backend";
+    
+            xhr.open('GET', url, true);
+    
+            xhr.onload = function () {
+                if (xhr.status >= 200 && xhr.status < 300) {
+                    // Set the received HTML to the response-container
+                    document.getElementById('response-container').innerHTML = xhr.responseText;
+    
+                    // Navigate to the received HTML
+                    window.location.href = url;
+                } else {
+                    console.error('Request failed with status', xhr.status);
+                }
+            };
+    
+            xhr.send();
+        }
+    </script></section>
 
 <!-- Sección de despliegue -->
 <section>
@@ -222,8 +409,32 @@
     <!-- Textos realizados por el equipo -->
     <!-- Versiones y formulario de contáctenos -->
     <h3>Versiones</h3>
-    <!-- Button -->
-    <button type="button" th:onclick="alert('Button Clicked!')">Click me</button>
+    <!-- Boton despliegue -->
+    <button type="button" onclick="toggleGetRequest()">Abrir</button>
+    <div id="response-container"></div>
+    
+    <script th:inline="javascript">
+        function toggleGetRequest() {
+            var xhr = new XMLHttpRequest();
+            var url = "https://gruposjaveriana.dynaco.co/grupo27/pruebas/despliegue";
+    
+            xhr.open('GET', url, true);
+    
+            xhr.onload = function () {
+                if (xhr.status >= 200 && xhr.status < 300) {
+                    // Set the received HTML to the response-container
+                    document.getElementById('response-container').innerHTML = xhr.responseText;
+    
+                    // Navigate to the received HTML
+                    window.location.href = url;
+                } else {
+                    console.error('Request failed with status', xhr.status);
+                }
+            };
+    
+            xhr.send();
+        }
+    </script>
     <h3>Formulario de Contáctenos</h3>
     <!-- Formulario con Thymeleaf -->
     <form action="#" method="post">
@@ -249,6 +460,56 @@
         </div>
         <button type="submit">Enviar</button>
     </form>
+
+    <script>
+        document.getElementById('myForm').addEventListener('submit', function (event) {
+            event.preventDefault();
+    
+            // Get form data
+            var formData = {
+                nombres: document.getElementById('nombres').value,
+                apellidos: document.getElementById('apellidos').value,
+                correo: document.getElementById('correo').value,
+                semestre: parseInt(document.getElementById('semestre').value),
+                descripcion: document.getElementById('descripcion').value
+            };
+    
+            // Replace 'your_api_endpoint' with the actual API endpoint
+            var apiEndpoint = 'http://localhost:8080/grupo27/subirpregunta'; // replace with your API endpoint
+    
+            // Send POST request
+            fetch(apiEndpoint, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(formData)
+            })
+            .then(response => {
+                if (response.status === 201) {
+                    // Handle success for HTTP status 201 (Created)
+                    console.log('Resource created successfully');
+                    return response.json();
+                } else {
+                    // Handle other HTTP statuses
+                    console.error('Request failed with status', response.status);
+                    throw new Error('Request failed');
+                }
+            })
+            .then(data => {
+                // Handle success response
+                console.log('Success:', data);
+                // Additional actions for a successful response
+            })
+            .catch(error => {
+                // Handle error
+                console.error('Error:', error);
+                // Additional actions for error handling
+            });
+        });
+    </script>
+    
+    
 </section>
 
 <!-- Pie de página -->
