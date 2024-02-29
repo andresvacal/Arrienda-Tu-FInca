@@ -106,16 +106,18 @@
     <h3>Grupo 5</h3>
     <p>Arrienda tu Finca: Desarrollo de frontend, backend y base de datos.</p>
 
-    <!-- Listado de integrantes -->
-    <h3>Listado de Integrantes</h3>
-    <ul>
-        <li th:text="${integrante1}">Andrés Felipe Vaca Lago - Sexto semestre (Ingeniería de sistemas) - líder técnico/líder de pruebas - C++, SQL, Dart, Flutter, Java, Springboot</li>
-
-        <li th:text="${integrante2}">Felipe Londoño Campos - Sexto semestre (Ingeniería de sistemas) - líder planeación/líder de pruebas- C++, SQL, Python , Java, C, C#
-
-
-            
-    </ul>
+<!-- Listado de integrantes -->
+<h3 style="color: #3498db; font-size: 1.5em;">Listado de Integrantes</h3>
+<ul style="list-style-type: none; padding: 0;">
+    <li style="margin-bottom: 20px; display: flex; flex-direction: column; align-items: center;">
+        <span style="background-color: #ecf0f1; padding: 10px; border-radius: 5px; text-align: center;">Andrés Felipe Vaca Lago - Sexto semestre (Ingeniería de sistemas) - líder técnico/líder de pruebas - C++, SQL, Dart, Flutter, Java, Springboot</span>
+        <img src="https://i.postimg.cc/tRr60nYQ/Whats-App-Image-2024-02-29-at-4-54-32-PM.jpg" alt="Andrés Image" style="border-radius: 5px; margin-top: 10px;">
+    </li>
+    <li style="margin-bottom: 20px; display: flex; flex-direction: column; align-items: center;">
+        <span style="background-color: #ecf0f1; padding: 10px; border-radius: 5px; text-align: center;">Felipe Londoño Campos - Sexto semestre (Ingeniería de sistemas) - líder planeación/líder de pruebas- C++, SQL, Python , Java, C, C#</span>
+        <img src="https://i.postimg.cc/xTt0CLLg/Foto-Londono.jpg" alt="Felipe Image" style="border-radius: 5px; margin-top: 10px;">
+    </li>
+</ul>
 </section>
 
 <!-- Sección de descripción del proyecto -->
@@ -140,7 +142,7 @@
     <h4>Funcionales</h4>
     <!-- boton funcionales* -->
     <button type="button" onclick="toggleGetRequest()">Abrir</button>
-    <div id="response-container"></div>
+    <div id="response-container0"></div>
     
     <script th:inline="javascript">
         function toggleGetRequest() {
@@ -152,7 +154,7 @@
             xhr.onload = function () {
                 if (xhr.status >= 200 && xhr.status < 300) {
                     // Set the received HTML to the response-container
-                    document.getElementById('response-container').innerHTML = xhr.responseText;
+                    document.getElementById('response-container0').innerHTML = xhr.responseText;
     
                     // Navigate to the received HTML
                     window.location.href = url;
@@ -198,7 +200,7 @@
     <h4>Diagrama de contexto </h4>
     <!-- Boton diagrama de contexto -->
     <button type="button" onclick="toggleGetRequest2()">Abrir</button>
-    <div id="response-container"></div>
+    <div id="response-container1"></div>
     
     <script th:inline="javascript">
         function toggleGetRequest2() {
@@ -210,7 +212,7 @@
             xhr.onload = function () {
                 if (xhr.status >= 200 && xhr.status < 300) {
                     // Set the received HTML to the response-container
-                    document.getElementById('response-container').innerHTML = xhr.responseText;
+                    document.getElementById('response-container1').innerHTML = xhr.responseText;
     
                     // Navigate to the received HTML
                     window.location.href = url;
@@ -225,7 +227,7 @@
     <h4>Diagramas de contenedor </h4>
     <!-- Boton Diagrama de contenedor -->
     <button type="button" onclick="toggleGetRequest3()">Abrir</button>
-    <div id="response-container"></div>
+    <div id="response-container2"></div>
     
     <script th:inline="javascript">
         function toggleGetRequest3() {
@@ -237,7 +239,7 @@
             xhr.onload = function () {
                 if (xhr.status >= 200 && xhr.status < 300) {
                     // Set the received HTML to the response-container
-                    document.getElementById('response-container').innerHTML = xhr.responseText;
+                    document.getElementById('response-container2').innerHTML = xhr.responseText;
     
                     // Navigate to the received HTML
                     window.location.href = url;
@@ -252,7 +254,7 @@
     <h4>Diagrama de componentes </h4>
     <!-- Boton diagrama de componentes -->
     <button type="button" onclick="toggleGetRequest4()">Abrir</button>
-    <div id="response-container"></div>
+    <div id="response-container3"></div>
     
     <script th:inline="javascript">
         function toggleGetRequest4() {
@@ -264,7 +266,7 @@
             xhr.onload = function () {
                 if (xhr.status >= 200 && xhr.status < 300) {
                     // Set the received HTML to the response-container
-                    document.getElementById('response-container').innerHTML = xhr.responseText;
+                    document.getElementById('response-container3').innerHTML = xhr.responseText;
     
                     // Navigate to the received HTML
                     window.location.href = url;
@@ -281,7 +283,7 @@
     <h4>Diagrama de contexto </h4>
     <!-- boton diagrama de contexto -->
     <button type="button" onclick="toggleGetRequest5()">Abrir</button>
-    <div id="response-container"></div>
+    <div id="response-container4"></div>
     
     <script th:inline="javascript">
         function toggleGetRequest5() {
@@ -293,7 +295,7 @@
             xhr.onload = function () {
                 if (xhr.status >= 200 && xhr.status < 300) {
                     // Set the received HTML to the response-container
-                    document.getElementById('response-container').innerHTML = xhr.responseText;
+                    document.getElementById('response-container4').innerHTML = xhr.responseText;
     
                     // Navigate to the received HTML
                     window.location.href = url;
@@ -316,7 +318,7 @@
     <!-- Button -->
     <!-- boton diagrama de contexto -->
     <button type="button" onclick="toggleGetRequest6()">Abrir</button>
-    <div id="response-container"></div>
+    <div id="response-container5"></div>
     
     <script th:inline="javascript">
         function toggleGetRequest6() {
@@ -328,7 +330,7 @@
             xhr.onload = function () {
                 if (xhr.status >= 200 && xhr.status < 300) {
                     // Set the received HTML to the response-container
-                    document.getElementById('response-container').innerHTML = xhr.responseText;
+                    document.getElementById('response-container5').innerHTML = xhr.responseText;
     
                     // Navigate to the received HTML
                     window.location.href = url;
@@ -351,7 +353,7 @@
     <h3>Casos de Pruebas Frontend</h3>
     <!-- Boton pruebas front -->
     <button type="button" onclick="toggleGetRequest7()">Abrir</button>
-    <div id="response-container"></div>
+    <div id="response-container6"></div>
     
     <script th:inline="javascript">
         function toggleGetRequest7() {
@@ -363,7 +365,7 @@
             xhr.onload = function () {
                 if (xhr.status >= 200 && xhr.status < 300) {
                     // Set the received HTML to the response-container
-                    document.getElementById('response-container').innerHTML = xhr.responseText;
+                    document.getElementById('response-container6').innerHTML = xhr.responseText;
     
                     // Navigate to the received HTML
                     window.location.href = url;
@@ -378,7 +380,7 @@
     <h3>Casos de Pruebas Backend</h3>
     <!-- Boton casos de prueba backend -->
     <button type="button" onclick="toggleGetRequest8()">Abrir</button>
-    <div id="response-container"></div>
+    <div id="response-container7"></div>
     
     <script th:inline="javascript">
         function toggleGetRequest8() {
@@ -390,7 +392,7 @@
             xhr.onload = function () {
                 if (xhr.status >= 200 && xhr.status < 300) {
                     // Set the received HTML to the response-container
-                    document.getElementById('response-container').innerHTML = xhr.responseText;
+                    document.getElementById('response-container7').innerHTML = xhr.responseText;
     
                     // Navigate to the received HTML
                     window.location.href = url;
@@ -411,7 +413,7 @@
     <h3>Versiones</h3>
     <!-- Boton despliegue -->
     <button type="button" onclick="toggleGetRequest9()">Abrir</button>
-    <div id="response-container"></div>
+    <div id="response-container8"></div>
     
     <script th:inline="javascript">
         function toggleGetRequest9() {
@@ -423,7 +425,7 @@
             xhr.onload = function () {
                 if (xhr.status >= 200 && xhr.status < 300) {
                     // Set the received HTML to the response-container
-                    document.getElementById('response-container').innerHTML = xhr.responseText;
+                    document.getElementById('response-container8').innerHTML = xhr.responseText;
     
                     // Navigate to the received HTML
                     window.location.href = url;
