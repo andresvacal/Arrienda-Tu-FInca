@@ -1,8 +1,5 @@
-/* ==========================================================================
-   Your custom CSS styles
-   ========================================================================== */
-
-   body {
+/* Reset styles */
+body {
     font-family: 'Helvetica Neue', Arial, sans-serif;
     background-color: #f4f4f4;
     color: #333;
@@ -10,6 +7,7 @@
     padding: 0;
 }
 
+/* Header styles - merged with custom styles */
 header {
     background-color: #2c3e50;
     color: #ecf0f1;
@@ -17,14 +15,17 @@ header {
     text-align: center;
 }
 
+/* Heading colors - merged with custom styles */
 h1, h2, h3 {
     color: #2c3e50;
 }
 
+/* Section styles - merged with custom styles */
 section {
     margin: 20px;
 }
 
+/* List styles - merged with custom styles */
 ul {
     list-style-type: none;
     padding: 0;
@@ -34,6 +35,17 @@ li {
     margin-bottom: 10px;
 }
 
+/* Button styles - taken from custom styles */
+button {
+    background-color: #2ecc71;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+/* Footer styles - merged with custom styles */
 footer {
     background-color: #34495e;
     color: #ecf0f1;
@@ -41,10 +53,7 @@ footer {
     text-align: center;
 }
 
-/* ==========================================================================
-   Your custom CSS styles for smartphones and screens smaller than 480 px
-   ========================================================================== */
-
+/* Responsive styles for small screens - taken from custom styles */
 @media only screen and (max-width: 480px) {
     body {
         font-size: 14px;
@@ -57,25 +66,19 @@ footer {
     section {
         margin: 10px;
     }
-
+s
     footer {
         padding: 5px;
     }
 }
 
-/* ==========================================================================
-   Helper classes
-   ========================================================================== */
-
+/* Helper classes - unchanged from the original */
 .hidden {
     display: none !important;
     visibility: hidden;
 }
 
-/* Clearfix
- * Adding a 'clearfix' class will allow parent elements to contain a floated child element
- */
-
+/* Clearfix - unchanged from the original */
 .clearfix:before,
 .clearfix:after {
     content: " "; /* 1 */
@@ -84,13 +87,4 @@ footer {
 
 .clearfix:after {
     clear: both;
-}
-
-/*
- * For IE 6/7 only
- * Include this rule to trigger hasLayout and contain floats.
- */
-
-.clearfix {
-    *zoom: 1;
 }

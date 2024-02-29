@@ -26,12 +26,25 @@
             padding: 0;
         }
 
-        header {
-            background-color: #3498db;
-            color: #ecf0f1;
-            padding: 20px;
-            text-align: center;
-        }
+/* Header styles */
+header {
+    background: linear-gradient(to right, #3498db, #2980b9); /* Gradient background */
+    color: #fff; /* Text color is white */
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add a subtle box shadow */
+    border-radius: 8px; /* Add rounded corners */
+}
+
+header p {
+    margin: 10px 0; /* Add some margin between paragraphs */
+    font-size: 18px; /* Increase the font size */
+    font-family: 'Arial', sans-serif; /* Change the font family */
+    letter-spacing: 1px; /* Add some letter spacing */
+    line-height: 1.5; /* Improve the line height for better readability */
+}
+
+
 
         h1, h2, h3 {
             color: #3498db;
@@ -98,26 +111,39 @@
         <p>Desarrollo web - Universidad Javeriana.</p>
     </header>
 
-    <!-- Sección de presentación del equipo -->
-<section>
+<!-- Sección de presentación del equipo -->
+<section style="text-align: center;">
     <h2>Página de presentación del equipo</h2>
     <!-- Textos realizados por el equipo -->
     <!-- Nombre del equipo -->
-    <h3>Grupo 5</h3>
+    <h3>Grupo 7</h3>
     <p>Arrienda tu Finca: Desarrollo de frontend, backend y base de datos.</p>
+</section>
+
 
 <!-- Listado de integrantes -->
-<h3 style="color: #3498db; font-size: 1.5em;">Listado de Integrantes</h3>
-<ul style="list-style-type: none; padding: 0;">
-    <li style="margin-bottom: 20px; display: flex; flex-direction: column; align-items: center;">
-        <span style="background-color: #ecf0f1; padding: 10px; border-radius: 5px; text-align: center;">Andrés Felipe Vaca Lago - Sexto semestre (Ingeniería de sistemas) - líder técnico/líder de pruebas - C++, SQL, Dart, Flutter, Java, Springboot</span>
-        <img src="https://i.postimg.cc/tRr60nYQ/Whats-App-Image-2024-02-29-at-4-54-32-PM.jpg" alt="Andrés Image" style="border-radius: 5px; margin-top: 10px;">
+<h3 style="color: #3498db; font-size: 1.5em; text-align: center;">Listado de Integrantes</h3>
+<ul style="list-style-type: none; padding: 0; text-align: center;">
+    <li style="margin-bottom: 40px; display: flex; flex-direction: column; align-items: center;">
+        <span style="background-color: #ecf0f1; padding: 20px; border-radius: 10px; text-align: center; max-width: 500px; margin: 0 auto;">
+            <strong>Andrés Felipe Vaca Lago</strong><br>
+            Sexto semestre (Ingeniería de sistemas)<br>
+            Líder técnico/líder de pruebas<br>
+            C++, SQL, Dart, Flutter, Java, Springboot
+        </span>
+        <img src="https://i.postimg.cc/tRr60nYQ/Whats-App-Image-2024-02-29-at-4-54-32-PM.jpg" alt="Andrés Image" style="border-radius: 50%; margin-top: 20px; width: 150px; height: 150px; object-fit: cover;">
     </li>
-    <li style="margin-bottom: 20px; display: flex; flex-direction: column; align-items: center;">
-        <span style="background-color: #ecf0f1; padding: 10px; border-radius: 5px; text-align: center;">Felipe Londoño Campos - Sexto semestre (Ingeniería de sistemas) - líder planeación/líder de pruebas- C++, SQL, Python , Java, C, C#</span>
-        <img src="https://i.postimg.cc/xTt0CLLg/Foto-Londono.jpg" alt="Felipe Image" style="border-radius: 5px; margin-top: 10px;">
+    <li style="margin-bottom: 40px; display: flex; flex-direction: column; align-items: center;">
+        <span style="background-color: #ecf0f1; padding: 20px; border-radius: 10px; text-align: center; max-width: 500px; margin: 0 auto;">
+            <strong>Felipe Londoño Campos</strong><br>
+            Sexto semestre (Ingeniería de sistemas)<br>
+            Líder planeación/líder de pruebas<br>
+            C++, SQL, Python, Java, C, C#
+        </span>
+        <img src="https://i.postimg.cc/xTt0CLLg/Foto-Londono.jpg" alt="Felipe Image" style="border-radius: 50%; margin-top: 20px; width: 150px; height: 150px; object-fit: cover;">
     </li>
 </ul>
+
 </section>
 
 <!-- Sección de descripción del proyecto -->
