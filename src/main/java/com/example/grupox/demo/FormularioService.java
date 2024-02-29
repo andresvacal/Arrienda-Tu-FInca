@@ -21,8 +21,9 @@ public class FormularioService {
     }
 
     public ResponseEntity<String> saveFormulario(Formulario formulario) {
+        System.out.println("mi formulario" + formulario);
+
         formularioRepository.save(formulario);
-        System.err.println("mi formulario" + formulario);
                 return new ResponseEntity<>("Formulario submitted successfully", HttpStatus.CREATED);
 
     }

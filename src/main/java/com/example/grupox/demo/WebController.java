@@ -30,6 +30,8 @@ public class WebController {
 
 	@PostMapping(path = "/subirpregunta")
     public void submitForm(@RequestBody Formulario formulario) {
+        System.out.println("mi formulario" + formulario);
+
         formularioService.saveFormulario(formulario);
 
     }
