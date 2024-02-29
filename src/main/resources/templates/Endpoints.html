@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Wiki del Equipo</title>
+    <meta name="description" content="Desarrollo Web - Universidad Javeriana - 2024-1 - Bogotá - Colombia">
+    <link rel="shortcut icon" href="favicon.ico">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/html5-boilerplate.css">
+    <link rel="stylesheet" href="css/main.css">
+    <style th:inline="text">
+        body {
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #3498db;
+            color: #ecf0f1;
+            padding: 20px;
+            text-align: center;
+        }
+        h1, h2, h3 {
+            color: #3498db;
+        }
+        .hia-section {
+            margin: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+        }
+        .hia {
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        li {
+            margin-bottom: 10px;
+        }
+        button {
+            background-color: #2ecc71;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        footer {
+            background-color: #34495e;
+            color: #ecf0f1;
+            padding: 10px;
+            text-align: center;
+        }
+        @media only screen and (max-width: 480px) {
+            body {
+                font-size: 14px;
+            }
+            header, section, footer {
+                padding: 10px;
+            }
+            .hia-section {
+                margin: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Bienvenid@ a nuestra Wiki</h1>
+        <p>Desarrollo web - Universidad Javeriana.</p>
+    </header>
+
+    <section class="hia-section">
+        <h2>Requisitos Funcionales</h2>
+        
+        <div>
+            <strong>Usuarios Arrendadores</strong> 
+        </div>
+<!-- HUA1 -->
+<div class="hia">
+    <p>Creación de Cuenta (HUA1)</p>
+    <p>POST /arrendadores/registro para registrar un nuevo usuario arrendador en el sistema.</p>
+</div>
+
+<!-- HUA2 -->
+        
+<div class="hia">
+    <p>Activación de Cuenta (HUA2)</p>
+    <p>GET /arrendadores/activacion/{token} para activar la cuenta del arrendador a través del token recibido por correo electrónico.</p>
+</div>
+
+      <!-- HUA3 -->
+<div class="hia">
+    <p>Autenticación de Usuario (HUA3)</p>
+    <p>POST /auth/login para que los arrendadores inicien sesión en el sistema.</p>
+</div>
+
+<!-- HUA4 -->
+<div class="hia">
+    <p>Ver Mis Propiedades (HUA4)</p>
+    <p>GET /propiedades/mis-propiedades para que los arrendadores vean un listado de sus propiedades.</p>
+</div>
+
+<!-- HUA5 -->
+<div class="hia">
+    <p>Crear Propiedad (HUA5)</p>
+    <p>POST /propiedades/nueva para crear una nueva propiedad en el sistema.</p>
+</div>
+
+<!-- HUA6 -->
+<div class="hia">
+    <p>Editar Propiedad (HUA6)</p>
+    <p>PUT /propiedades/editar/{idPropiedad} para editar los detalles de una propiedad existente.</p>
+</div>
+
+<!-- HUA7 -->
+<div class="hia">
+    <p>Subir Foto de la Propiedad (HUA7)</p>
+    <p>POST /propiedades/{idPropiedad}/subir-foto para subir fotos a una propiedad específica.</p>
+</div>
+
+<!-- HUA8 -->
+<div class="hia">
+    <p>Desactivar Propiedad (HUA8)</p>
+    <p>PATCH /propiedades/desactivar/{idPropiedad} para desactivar una propiedad.</p>
+</div>
+
+<!-- HUA9 -->
+<div class="hia">
+    <p>Ver Solicitudes de Arriendo (HUA9)</p>
+    <p>GET /solicitudes/{idPropiedad} para ver las solicitudes de arriendo de una propiedad.</p>
+</div>
+
+<!-- HUA10 -->
+<div class="hia">
+    <p>Aceptar Solicitud de Arriendo (HUA10)</p>
+    <p>PATCH /solicitudes/aceptar/{idSolicitud} para aceptar una solicitud de arriendo.</p>
+</div>
+
+<!-- HUA11 -->
+<div class="hia">
+    <p>Cancelar Solicitud de Arriendo (HUA11)</p>
+    <p>PATCH /solicitudes/cancelar/{idSolicitud} para cancelar una solicitud de arriendo.</p>
+</div>
+
+<!-- HUA12 -->
+<div class="hia">
+    <p>Calificar Arrendatario (HUA12)</p>
+    <p>POST /calificaciones/{idArrendatario} para calificar a un arrendatario después de una estancia.</p>
+</div>
+
+<!-- HUA13 -->
+<div class="hia">
+    <strong>Usuarios Arrendatarios</strong>
+    <p>Creación de Cuenta (HUA13)</p>
+    <p>POST /arrendatarios/registro para registrar un nuevo usuario arrendatario.</p>
+</div>
+
+<!-- HUA14 -->
+<div class="hia">
+    <p>Activación de Cuenta (HUA14)</p>
+    <p>GET /arrendatarios/activacion/{token} similar al proceso de los arrendadores.</p>
+</div>
+
+<!-- HUA15 -->
+<div class="hia">
+    <p>Autenticación de Usuario (HUA15)</p>
+    <p>POST /auth/login igualmente para que los arrendatarios inicien sesión.</p>
+</div>
+
+<!-- HUA16 -->
+<div class="hia">
+    <p>Buscar Propiedades (HUA16)</p>
+    <p>GET /propiedades/buscar para buscar propiedades disponibles para arrendar.</p>
+</div>
+
+<!-- HUA17 -->
+<div class="hia">
+    <p>Solicitar Arriendo (HUA17)</p>
+    <p>POST /solicitudes/nueva para que un arrendatario solicite el arriendo de una propiedad.</p>
+</div>
+
+<!-- HUA18 -->
+<div class="hia">
+    <p>Ver Mis Solicitudes de Arriendo (HUA18)</p>
+    <p>GET /solicitudes/mis-solicitudes para que los arrendatarios revisen el estado de sus solicitudes.</p>
+</div>
+
+<!-- HUA19 -->
+<div class="hia">
+    <p>Pagar Arriendo (HUA19)</p>
+    <p>POST /pagos/realizar para realizar el pago de un arriendo aceptado.</p>
+</div>
+
+<!-- HUA20 -->
+<div class="hia">
+    <p>Calificar Finca (HUA20)</p>
+    <p>POST /calificaciones/{idFinca} para que los arrendatarios califiquen una finca después de su estancia.</p>
+</div>
+        
+       
+
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Grupo 7 - clase martes y jueves - 6:00PM - 8:00PM</p>
+    </footer>
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script th:inline="javascript">
+        window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2.min.js"><\/script>')
+    </script>
+    <script src="js/plugins.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
