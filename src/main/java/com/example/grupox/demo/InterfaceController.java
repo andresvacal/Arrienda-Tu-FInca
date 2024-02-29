@@ -38,15 +38,15 @@ public class InterfaceController {
 	}
     @GetMapping(path = "/endpoints")
 	public String endpoints() {
-		return "index";
+		return "Endpoints";
 	}
     @GetMapping(path = "/pruebas/frontend")
 	public String pruebasfront() {
-		return "index";
+		return "PruebasFrontEnd";
 	}
     @GetMapping(path = "/pruebas/backend")
 	public String pruebasback() {
-		return "index";
+		return "PruebasBackEnd";
 	}
     @GetMapping(path = "/despliegue")
 	public String despliegue() {
