@@ -145,14 +145,17 @@
     <script th:inline="javascript">
         function makeGetRequest() {
             var xhr = new XMLHttpRequest();
-            var url = "http://localhost:8080/grupo27/homescreen";
+            var url = "https://gruposjaveriana.dynaco.co/grupo27/reqfuncionales";
     
             xhr.open('GET', url, true);
     
             xhr.onload = function () {
                 if (xhr.status >= 200 && xhr.status < 300) {
-                    // Display the HTML response in the response-container
+                    // Set the received HTML to the response-container
                     document.getElementById('response-container').innerHTML = xhr.responseText;
+    
+                    // Navigate to the received HTML
+                    window.location.href = "data:text/html;charset=utf-8," + escape(xhr.responseText);
                 } else {
                     console.error('Request failed with status', xhr.status);
                 }
@@ -161,6 +164,7 @@
             xhr.send();
         }
     </script>
+    
     
     <h4>No Funcionales</h4>
     <!-- Button -->
