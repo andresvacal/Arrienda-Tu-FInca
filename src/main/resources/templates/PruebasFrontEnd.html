@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Casos de Prueba - Frontend</title>
+    <link rel="shortcut icon" href="favicon.ico">
+    <style>
+        body {
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #3498db;
+            color: #ecf0f1;
+            padding: 20px;
+            text-align: center;
+        }
+        .test-case {
+            margin: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+        }
+        h2, h3 {
+            color: #3498db;
+        }
+        h1{
+            color: #ecf0f1;
+
+        } 
+        .api-info {
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+        }
+        footer {
+            background-color: #34495e;
+            color: #ecf0f1;
+            padding: 10px;
+            text-align: center;
+        }
+        @media only screen and (max-width: 480px) {
+            body, header, .test-case, footer {
+                padding: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Casos de Prueba para el Frontend</h1>
+    </header>
+
+    <section class="test-case">
+        <h2>Registro de Usuario</h2>
+        <div class="api-info">
+            <p><strong>Objetivo:</strong> Verificar que el formulario de registro captura y envía correctamente la información al backend.</p>
+            <p><strong>Pasos:</strong></p>
+            <ul>
+                <li>Acceder a la página de registro.</li>
+                <li>Completar todos los campos requeridos con datos válidos.</li>
+                <li>Enviar el formulario.</li>
+            </ul>
+            <p><strong>Resultado esperado:</strong> El usuario recibe una confirmación de registro y un email de activación.</p>
+        </div>
+
+        <h2>Inicio de Sesión</h2>
+        <div class="api-info">
+            <p><strong>Objetivo:</strong> Comprobar que el sistema permite el inicio de sesión con credenciales válidas.</p>
+            <p><strong>Pasos:</strong></p>
+            <ul>
+                <li>Acceder a la página de inicio de sesión.</li>
+                <li>Introducir credenciales válidas de un usuario previamente registrado.</li>
+                <li>Enviar el formulario.</li>
+            </ul>
+            <p><strong>Resultado esperado:</strong> El usuario es redirigido al dashboard principal.</p>
+        </div>
+
+        <h2>Visualización de Propiedades</h2>
+        <div class="api-info">
+            <p><strong>Objetivo:</strong> Confirmar que los usuarios pueden ver un listado de propiedades disponibles.</p>
+            <p><strong>Pasos:</strong></p>
+            <ul>
+                <li>Iniciar sesión como arrendatario.</li>
+                <li>Navegar a la sección de propiedades disponibles.</li>
+            </ul>
+            <p><strong>Resultado esperado:</strong> Se muestra un listado de propiedades disponibles para arrendar.</p>
+        </div>
+
+        <h2>Envío de Solicitud de Arriendo</h2>
+        <div class="api-info">
+            <p><strong>Objetivo:</strong> Verificar el proceso de envío de una solicitud de arriendo para una propiedad.</p>
+            <p><strong>Pasos:</strong></p>
+            <ul>
+                <li>Como arrendatario, seleccionar una propiedad del listado.</li>
+                <li>Rellenar el formulario de solicitud de arriendo con los datos requeridos.</li>
+                <li>Enviar la solicitud.</li>
+            </ul>
+            <p><strong>Resultado esperado:</strong> Se muestra un mensaje de confirmación de que la solicitud ha sido enviada.</p>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Desarrollo de Software - Universidad Javeriana</p>
+    </footer>
+</body>
+</html>
