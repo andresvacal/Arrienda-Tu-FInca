@@ -34,7 +34,7 @@ public class InterfaceController {
 	}
     @GetMapping(path = "/diagrama/entidad")
 	public String dentidadrelacion() {
-		return "index";
+		return "EntidadRelacion";
 	}
     @GetMapping(path = "/endpoints")
 	public String endpoints() {
