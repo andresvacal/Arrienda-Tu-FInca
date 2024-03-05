@@ -15,10 +15,10 @@ import lombok.Setter;
 @Entity
 public class Arrendador extends Usuario {
 
-  /*  @OneToMany(mappedBy = "arrendador") 
-    private List<Propiedad> propiedades;*/
+   @OneToMany(mappedBy = "arrendador") 
+    private List<Propiedad> propiedades;
 
-   /*  @OneToMany(mappedBy = "arrendador")
-    private List<SolicitudArriendo> solicitudes;*/
+     @OneToMany(mappedBy = "arrendador")
+    private List<SolicitudArriendo> solicitudes;
 
 }

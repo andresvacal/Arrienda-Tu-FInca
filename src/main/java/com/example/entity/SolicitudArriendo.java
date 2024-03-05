@@ -9,7 +9,11 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
+import lombok.Getter;
+import lombok.Setter;
 
+@Setter
+@Getter
 @Entity
 @Table
 public class SolicitudArriendo {
@@ -24,16 +28,12 @@ public class SolicitudArriendo {
     private double valor;
     private String estado;
 
-   /* @ManyToOne 
-    private Propiedad propiedad;*/
+    @ManyToOne 
+    private Propiedad propiedad;
 
     @ManyToOne
     private Arrendador arrendador;
 
     @ManyToOne
     private Arrendatario arrendatario;
-
-    // Constructores (puedes añadirlos según necesites)
-
-    // Sin getters y setters para mantener la brevedad
 }

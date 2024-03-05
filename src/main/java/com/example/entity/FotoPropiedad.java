@@ -5,7 +5,11 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.ManyToOne;
+import lombok.Getter;
+import lombok.Setter;
 
+@Setter
+@Getter
 @Entity
 public class FotoPropiedad {
 
@@ -15,8 +19,8 @@ public class FotoPropiedad {
 
     private String nombreArchivo;
 
-    /*@ManyToOne
-    private Propiedad propiedad;*/
+    @ManyToOne
+    private Propiedad propiedad;
 
 
 }
