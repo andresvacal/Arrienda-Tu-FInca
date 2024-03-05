@@ -1,4 +1,4 @@
-package com.example.grupox.demo;
+package com.example.Service;
 
 import java.util.List;
 
@@ -8,7 +8,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
 import com.example.Repository.FormularioRepository;
-import com.example.formulario.Formulario;
+import com.example.entity.Formulario;
 
 @Service
 public class FormularioService {

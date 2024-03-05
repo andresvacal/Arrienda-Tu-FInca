@@ -1,4 +1,4 @@
-package com.example.grupox.demo.entity;
+package com.example.entity;
 
 import org.hibernate.annotations.SQLDelete;
 import org.hibernate.annotations.Where;

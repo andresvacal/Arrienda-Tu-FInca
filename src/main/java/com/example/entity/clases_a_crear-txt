@@ -1,0 +1,43 @@
+Clases de Entidad:
+
+a. Usuario:
+- Atributos: idUsuario, nombres, apellidos, correoElectronico, telefono, password
+- Relaciones: Puede tener una relación con las clases Arrendatario y Arrendador utilizando herencia.
+
+b. Arrendador:
+- Atributos adicionales: lista de Propiedades (relación OneToMany), lista de Solicitudes (relación OneToMany)
+
+c. Arrendatario:
+- Atributos adicionales: lista de Solicitudes (relación OneToMany), lista de Pagos (relación OneToMany)
+
+d. Propiedad:
+- Atributos: idPropiedad, nombre, departamento, municipio, tipoIngreso, descripcion, cantidadHabitaciones, cantidadBanios, permiteMascotas, tienePiscina, tieneAsador, valorNoche
+- Relaciones: Puede tener una relación con Arrendador (ManyToOne), puede tener una lista de Fotos (OneToMany)
+
+e. SolicitudArriendo:
+- Atributos: idSolicitud, fechaSolicitud, fechaLlegada, fechaSalida, valor, estado (por aceptar, aceptada, pagada, por calificar, rechazada, finalizada)
+- Relaciones: Puede tener relaciones con Propiedad (ManyToOne), Arrendador (ManyToOne), Arrendatario (ManyToOne)
+
+f. FotoPropiedad:
+- Atributos: idFoto, nombreArchivo, propiedad (relación ManyToOne)
+
+Tablas correspondientes:
+
+a. Tabla: Usuario
+
+Columnas: idUsuario (PK), nombres, apellidos, correoElectronico, telefono, password, discriminator (para la herencia)
+b. Tabla: Arrendador
+
+Columnas: idArrendador (PK), idUsuario (FK), ...
+c. Tabla: Arrendatario
+
+Columnas: idArrendatario (PK), idUsuario (FK), ...
+d. Tabla: Propiedad
+
+Columnas: idPropiedad (PK), idArrendador (FK), nombre, departamento, municipio, tipoIngreso, descripcion, cantidadHabitaciones, cantidadBanios, permiteMascotas, tienePiscina, tieneAsador, valorNoche
+e. Tabla: SolicitudArriendo
+
+Columnas: idSolicitud (PK), idPropiedad (FK), idArrendador (FK), idArrendatario (FK), fechaSolicitud, fechaLlegada, fechaSalida, valor, estado
+f. Tabla: FotoPropiedad
+
+Columnas: idFoto (PK), idPropiedad (FK), nombreArchivo
