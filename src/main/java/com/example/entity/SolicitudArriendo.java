@@ -24,8 +24,8 @@ public class SolicitudArriendo {
     private double valor;
     private String estado;
 
-   /* @ManyToOne */
-    private Propiedad propiedad;
+   /* @ManyToOne 
+    private Propiedad propiedad;*/
 
     @ManyToOne
     private Arrendador arrendador;

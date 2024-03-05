@@ -1,17 +1,20 @@
 package com.example.entity;
 
-import java.util.List;
 
-import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.ManyToOne;
-import jakarta.persistence.OneToMany;
 import jakarta.persistence.SequenceGenerator;
 import jakarta.persistence.Table;
+import lombok.Getter;
+import lombok.Setter;
 
+
+
+@Setter
+@Getter
 @Entity
 @Table
 public class Propiedad {
@@ -26,7 +29,6 @@ public class Propiedad {
             strategy = GenerationType.SEQUENCE,
             generator = "formulario_sequence"
     )
-@Column(name = "idPropiedad", nullable = false, updatable = false)
     private Long idPropiedad;
 
     private String nombre;
@@ -40,13 +42,38 @@ public class Propiedad {
     private boolean tienePiscina;
     private boolean tieneAsador;
     private double valorNoche;
+    public Propiedad(String nombre, String departamento, String municipio, String tipoIngreso, String descripcion,
+            int cantidadHabitaciones, int cantidadBanios, boolean permiteMascotas, boolean tienePiscina,
+            boolean tieneAsador, double valorNoche) {
+        this.nombre = nombre;
+        this.departamento = departamento;
+        this.municipio = municipio;
+        this.tipoIngreso = tipoIngreso;
+        this.descripcion = descripcion;
+        this.cantidadHabitaciones = cantidadHabitaciones;
+        this.cantidadBanios = cantidadBanios;
+        this.permiteMascotas = permiteMascotas;
+        this.tienePiscina = tienePiscina;
+        this.tieneAsador = tieneAsador;
+        this.valorNoche = valorNoche;
+    }
 
-    /*@ManyToOne
-    private Arrendador arrendador;
+@Override
+public String toString() {
+        return "Propiedad [idPropiedad=" + idPropiedad + ", nombre=" + nombre + ", departamento=" + departamento
+                        + ", municipio=" + municipio + ", tipoIngreso=" + tipoIngreso + ", descripcion=" + descripcion
+                        + ", cantidadHabitaciones=" + cantidadHabitaciones + ", cantidadBanios=" + cantidadBanios
+                        + ", permiteMascotas=" + permiteMascotas + ", tienePiscina=" + tienePiscina + ", tieneAsador="
+                        + tieneAsador + ", valorNoche=" + valorNoche + ", arrendador=" + arrendador + "]";
+}
 
+
+
+
+@ManyToOne
+private Arrendador arrendador;
     /*@OneToMany(mappedBy = "propiedad")
     private List<FotoPropiedad> fotos;
 */
    
-    
 }
