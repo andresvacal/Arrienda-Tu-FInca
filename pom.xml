@@ -15,6 +15,12 @@
 	<name>demo</name>
 	<description>Demo project for Spring Boot</description>
 	<properties>
+
+    <sonar.host.url>http://sonarjaveriana.dynaco.co/</sonar.host.url>
+    <sonar.login>sqp_bdbc0fcf28016a32212b4ad648fe0e67bd0e06aa</sonar.login>
+    <sonar.projectKey>Analyze-grupo_2_7-</sonar.projectKey> 
+    <sonar.projectName>Analyze "grupo_2_7"</sonar.projectName>
+    <sonar.projectVersion>1.0</sonar.projectVersion>
 		<java.version>17</java.version>
 	</properties>
 	<dependencies>
@@ -58,6 +64,12 @@
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
 			</plugin>
+
+			        <plugin>
+            <groupId>org.sonarsource.scanner.maven</groupId>
+            <artifactId>sonar-maven-plugin</artifactId>
+            <version>3.7.0.1746</version>
+        </plugin>
 		</plugins>
 	</build>
 </project>
