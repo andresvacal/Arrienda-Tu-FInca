@@ -2,8 +2,9 @@ package com.example.Repository;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 
-import com.example.entity.Usuario;
+import com.example.entity.Arrendatario;
 
-public interface UsuarioRepository  extends JpaRepository<Usuario, Long>{
+
+public interface ArrendatarioRepository  extends JpaRepository<Arrendatario, Long>{
 
 }

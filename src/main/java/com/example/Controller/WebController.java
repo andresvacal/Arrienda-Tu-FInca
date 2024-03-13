@@ -1,4 +1,4 @@
-package com.example.grupox.demo;
+package com.example.Controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
