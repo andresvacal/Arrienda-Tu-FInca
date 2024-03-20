@@ -11,6 +11,8 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.example.Service.FormularioService;
 import com.example.entity.Formulario;
+import com.example.entity.Propiedad;
+import com.example.Service.PropiedadService;
 
 /*Controladores para retornar contenido */
 
@@ -23,6 +25,7 @@ public class WebController {
 
 
     private FormularioService formularioService;
+    private PropiedadService propiedadService;
 
 @Autowired
 	public WebController(FormularioService formularioService) {
@@ -40,6 +43,10 @@ public class WebController {
 	public void getforms() {
         formularioService.getFormularios();
 
+    }
+    @PostMapping(path = "/GuardarPropiedad")
+	public void guardarpropiedad(@RequestBody Propiedad propiedad) {
+        propiedadService.savepropiedad(propiedad);
     }
 
 }
