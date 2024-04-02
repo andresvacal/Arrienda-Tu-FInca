@@ -44,6 +44,7 @@ public class WebController {
         formularioService.getFormularios();
 
     }
+    //Rest de propiedades
     @PostMapping(path = "/GuardarPropiedad")
 	public void guardarpropiedad(@RequestBody Propiedad propiedad) {
         propiedadService.savepropiedad(propiedad);
