@@ -26,7 +26,7 @@ public class Arrendatario {
             strategy = GenerationType.SEQUENCE,
             generator = "formulario_sequence"
     )
-    private Long idUsuario;
+    private Long idArrendatario;
     private String nombres;
     private String apellidos;
     private String correoElectronico;

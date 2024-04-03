@@ -60,7 +60,7 @@ public class Propiedad {
         this.tieneAsador = tieneAsador;
         this.valorNoche = valorNoche;
     }
-
+/* 
 @Override
 public String toString() {
         return "Propiedad [idPropiedad=" + idPropiedad + ", nombre=" + nombre + ", departamento=" + departamento
@@ -69,10 +69,11 @@ public String toString() {
                         + ", permiteMascotas=" + permiteMascotas + ", tienePiscina=" + tienePiscina + ", tieneAsador="
                         + tieneAsador + ", valorNoche=" + valorNoche + ", arrendador=" + arrendador + "]";
 }
-
+*/
 @ManyToOne
 private Arrendador arrendador;
-    @OneToMany(mappedBy = "propiedad")
+    
+@OneToMany(mappedBy = "propiedad")
     private List<FotoPropiedad> fotos;
 
 }
