@@ -38,7 +38,5 @@ public class Arrendatario {
 
     @OneToMany(mappedBy = "arrendatario")
     private List<Pago> pagos;
-
-    
 }
 
