@@ -1,5 +1,7 @@
 package com.example.Controller;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -23,8 +25,8 @@ public class ArrendadorController {
         this.arrendadorService = arrendadorService;
     }
     @GetMapping(path = "/Verarrendadores")
-    public void getarrendadores() {
-        arrendadorService.getArrendadores();
+    public List<Arrendador> getarrendadores() {
+        return arrendadorService.getArrendadores();
     }
     @PostMapping(path = "/GuardarArrendador")
     public void guardararrendador(@RequestBody Arrendador arrendador) {

@@ -1,5 +1,7 @@
 package com.example.Controller;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -23,8 +25,8 @@ public class FotoPropiedadController {
         this.fotoPropiedadService = fotoPropiedadService;
     }
     @GetMapping(path = "/VerfotosPropiedades")
-    public void getfotosPropiedades() {
-        fotoPropiedadService.getFotosPropiedades();
+    public List<FotoPropiedad> getfotosPropiedades() {
+        return fotoPropiedadService.getFotosPropiedades();
     }
     @PostMapping(path = "/GuardarFotoPropiedad")
     public void guardarFotoPropiedad(@RequestBody FotoPropiedad fotoPropiedad) {

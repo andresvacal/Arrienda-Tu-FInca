@@ -1,5 +1,7 @@
 package com.example.Controller;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -25,8 +27,8 @@ public class PropiedadController {
 
 
     @GetMapping(path = "/Verpropiedades")
-    public void getpropiedades() {
-        propiedadService.getPropiedades();
+    public List<Propiedad> getpropiedades() {
+        return propiedadService.getPropiedades();
     }
 
     //Rest de propiedades
