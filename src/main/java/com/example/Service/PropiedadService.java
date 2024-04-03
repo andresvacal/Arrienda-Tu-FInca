@@ -13,11 +13,17 @@ import com.example.entity.Propiedad;
 public class PropiedadService {
 
     private final PropiedadRepository propiedadRepository;
-    
+
     @Autowired
     public PropiedadService(PropiedadRepository propiedadRepository) {
         this.propiedadRepository = propiedadRepository;
     }
+
+
+    public List<Propiedad> getPropiedades() {
+        return propiedadRepository.findAll();
+    }
+    
     public void savepropiedad(Propiedad propiedad) {
         System.out.println("mi propiedad es: " + propiedad);
         propiedadRepository.save(propiedad);

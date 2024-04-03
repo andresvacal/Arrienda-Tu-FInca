@@ -4,6 +4,7 @@ import org.springframework.stereotype.Service;
 
 import com.example.Repository.ArrendadorRepository;
 import com.example.Repository.FormularioRepository;
+import com.example.entity.Arrendador;
 @Service
 public class ArrendadorService {
     private final ArrendadorRepository arrendadorRepository;
@@ -12,6 +13,14 @@ public class ArrendadorService {
     @Autowired
     public ArrendadorService(ArrendadorRepository arrendadorRepository) {
         this.arrendadorRepository = arrendadorRepository;
+    }
+
+    public void getArrendadores() {
+        arrendadorRepository.findAll();
+    }
+    public void saveArrendador(Arrendador arrendador) {
+        System.out.println("mi arrendador es: " + arrendador);
+        arrendadorRepository.save(arrendador);
     }
 
 }

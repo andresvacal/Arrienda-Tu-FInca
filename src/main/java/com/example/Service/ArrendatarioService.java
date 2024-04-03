@@ -15,8 +15,4 @@ public class ArrendatarioService {
     public ArrendatarioService(ArrendatarioRepository arrendatarioRepository) {
         this.arrendatarioRepository = arrendatarioRepository;
     }
-
-
-
-
 }

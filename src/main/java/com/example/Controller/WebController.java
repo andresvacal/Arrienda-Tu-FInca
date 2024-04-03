@@ -22,12 +22,9 @@ import com.example.Service.PropiedadService;
 @RequestMapping(path = "/grupo27")
 public class WebController {
 
-
-
     private FormularioService formularioService;
-    private PropiedadService propiedadService;
 
-@Autowired
+    @Autowired
 	public WebController(FormularioService formularioService) {
 		this.formularioService = formularioService;
 	}
@@ -42,12 +39,5 @@ public class WebController {
 	@GetMapping(path = "/subirpregunta")
 	public void getforms() {
         formularioService.getFormularios();
-
     }
-    //Rest de propiedades
-    @PostMapping(path = "/GuardarPropiedad")
-	public void guardarpropiedad(@RequestBody Propiedad propiedad) {
-        propiedadService.savepropiedad(propiedad);
-    }
-
 }
