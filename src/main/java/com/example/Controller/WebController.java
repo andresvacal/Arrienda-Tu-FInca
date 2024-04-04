@@ -19,7 +19,7 @@ import com.example.Service.PropiedadService;
 @CrossOrigin(origins = "*")
 
 @RestController
-@RequestMapping(path = "/grupo27")
+//@RequestMapping(path = "/grupo27")
 public class WebController {
 
     private FormularioService formularioService;
