@@ -32,11 +32,11 @@ public class Arrendatario {
     private String correoElectronico;
     private String telefono;
     private String password;
-
+/* 
     @OneToMany(mappedBy = "arrendatario")
     private List<SolicitudArriendo> solicitudes;
 
     @OneToMany(mappedBy = "arrendatario")
-    private List<Pago> pagos;
+    private List<Pago> pagos;*/
 }
 

@@ -6,27 +6,38 @@ import org.springframework.beans.factory.annotation.Autowired;
 
 import org.springframework.stereotype.Service;
 
+import com.example.Repository.ArrendadorRepository;
 import com.example.Repository.PropiedadRepository;
+import com.example.entity.Arrendador;
 import com.example.entity.Propiedad;
 
 @Service
 public class PropiedadService {
 
     private final PropiedadRepository propiedadRepository;
+    private final ArrendadorRepository arrendadorRepository;
+
+    public PropiedadService(PropiedadRepository propiedadRepository, ArrendadorRepository arrendadorRepository) {
+        this.propiedadRepository = propiedadRepository;
+        this.arrendadorRepository = arrendadorRepository;
+    }
 
     @Autowired
-    public PropiedadService(PropiedadRepository propiedadRepository) {
-        this.propiedadRepository = propiedadRepository;
-    }
 
 
     public List<Propiedad> getPropiedades() {
         return propiedadRepository.findAll();
     }
     
-    public void savepropiedad(Propiedad propiedad) {
-        System.out.println("mi propiedad es: " + propiedad);
+    public void savepropiedad(Long idArrendador,Propiedad propiedad) {
+        System.out.println("mi propiedad a guardar: " + propiedad);
+        
+Arrendador arrendador = arrendadorRepository.findByIdArrendador(idArrendador)
+                .orElseThrow(() -> new IllegalStateException("Arrendador con ese " + idArrendador + " not found"));
+        propiedad.setArrendador(arrendador);
+
         propiedadRepository.save(propiedad);
+
     }
 
     public void eliminarPropiedad(Long id) {

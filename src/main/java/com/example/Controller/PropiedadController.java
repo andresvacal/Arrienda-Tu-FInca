@@ -35,18 +35,16 @@ public class PropiedadController {
     }
 
     //Rest de propiedades
-    @PostMapping(path = "/GuardarPropiedad")
-	public void guardarpropiedad(@RequestBody Propiedad propiedad) {
+    @PostMapping(path = "/GuardarPropiedad/{idArrendador}")
+	public void guardarpropiedad(@PathVariable Long idArrendador, @RequestBody Propiedad propiedad) {
         System.out.println("mi propiedad es: " + propiedad);
-        propiedadService.savepropiedad(propiedad);
+        propiedadService.savepropiedad(idArrendador, propiedad);
     }
-
     @DeleteMapping(path = "/{idPropiedad}")
     public void eliminarpropiedad(
         @PathVariable("idPropiedad") Long id){
         propiedadService.eliminarPropiedad(id);
     }
-
 
     @PutMapping(path = "/{idPropiedad}")
     public Propiedad actualizarpropiedad(

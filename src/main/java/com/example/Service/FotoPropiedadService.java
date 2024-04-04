@@ -8,20 +8,34 @@ import org.springframework.stereotype.Service;
 
 import com.example.Repository.ArrendatarioRepository;
 import com.example.Repository.FotoPropiedadRepository;
+import com.example.Repository.PropiedadRepository;
 import com.example.entity.FotoPropiedad;
+import com.example.entity.Propiedad;
 @Service
 public class FotoPropiedadService {
     private final FotoPropiedadRepository fotoPropiedadRepository;
-    @Autowired
-    public FotoPropiedadService(FotoPropiedadRepository fotoPropiedadRepository) {
+    private final PropiedadRepository propiedadRepository;
+    
+    public FotoPropiedadService(FotoPropiedadRepository fotoPropiedadRepository,
+            PropiedadRepository propiedadRepository) {
         this.fotoPropiedadRepository = fotoPropiedadRepository;
+        this.propiedadRepository = propiedadRepository;
     }
+    @Autowired
+
     public List<FotoPropiedad> getFotosPropiedades() {
         return fotoPropiedadRepository.findAll();
     }
-    public void saveFotoPropiedad(FotoPropiedad fotoPropiedad) {
+    public void saveFotoPropiedad(Long idPropiedad,FotoPropiedad fotoPropiedad) {
         System.out.println("mi FotoPropiedad es: " + fotoPropiedad);
+
+        Propiedad propiedad = propiedadRepository.findByIdPropiedad(idPropiedad)
+            .orElseThrow(() -> new IllegalStateException(
+                "Propiedad con id " + idPropiedad + " no existe"
+            ));
+       propiedad.getFotos().add(fotoPropiedad);
         fotoPropiedadRepository.save(fotoPropiedad);
+        propiedadRepository.save(propiedad);
     }
     public void eliminarFotoPropiedad(Long id) {
         boolean exists = fotoPropiedadRepository.existsById(id);

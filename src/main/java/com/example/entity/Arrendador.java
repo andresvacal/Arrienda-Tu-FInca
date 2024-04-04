@@ -36,11 +36,11 @@ public class Arrendador  {
     private String correoElectronico;
     private String telefono;
     private String password;
-
+/* 
    @OneToMany(mappedBy = "arrendador") 
-    private List<Propiedad> propiedades;
+    private List<Propiedad> propiedades;*/
 
-     @OneToMany(mappedBy = "arrendador")
-    private List<SolicitudArriendo> solicitudes;
+    /*  @OneToMany(mappedBy = "arrendador")
+    private List<SolicitudArriendo> solicitudes;*/
 
 }

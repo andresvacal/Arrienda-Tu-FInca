@@ -1,5 +1,7 @@
 package com.example.entity;
 import java.util.List;
+
+import jakarta.persistence.CascadeType;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -71,8 +73,10 @@ public String toString() {
 private Arrendador arrendador;
     
 
-@OneToMany(mappedBy = "propiedad")
-    private List<FotoPropiedad> fotos;
+@OneToMany(cascade = CascadeType.ALL)
+public List<FotoPropiedad> fotos;
+
+
 public Propiedad() {
 }
 

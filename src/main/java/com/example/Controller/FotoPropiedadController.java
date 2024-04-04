@@ -14,7 +14,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.example.Service.FotoPropiedadService;
+import com.example.Service.PropiedadService;
 import com.example.entity.FotoPropiedad;
+import com.fasterxml.jackson.databind.annotation.JsonAppend.Prop;
 
 @CrossOrigin(origins = "*")
 
@@ -22,6 +24,7 @@ import com.example.entity.FotoPropiedad;
 @RequestMapping(path = "/fotoPropiedad")
 public class FotoPropiedadController {
  private FotoPropiedadService fotoPropiedadService;
+    
 
  @Autowired
     public FotoPropiedadController(FotoPropiedadService fotoPropiedadService) {
@@ -31,10 +34,10 @@ public class FotoPropiedadController {
     public List<FotoPropiedad> getfotosPropiedades() {
         return fotoPropiedadService.getFotosPropiedades();
     }
-    @PostMapping(path = "/GuardarFotoPropiedad")
-    public void guardarFotoPropiedad(@RequestBody FotoPropiedad fotoPropiedad) {
+    @PostMapping(path = "/GuardarFotoPropiedad/{idPropiedad}")
+    public void guardarFotoPropiedad(@PathVariable Long idPropiedad,@RequestBody FotoPropiedad fotoPropiedad) {
                 System.out.println("mi FotoPropiedad a guardar es: " + fotoPropiedad);
-        fotoPropiedadService.saveFotoPropiedad(fotoPropiedad);
+        fotoPropiedadService.saveFotoPropiedad(idPropiedad, fotoPropiedad);
     }
     @DeleteMapping(path = "{idFotoPropiedad}")
     public void eliminarFotoPropiedad(

@@ -31,7 +31,7 @@ public class SolicitudArriendoController {
     public List<SolicitudArriendo> getSolicitudArriendo() {
        return solicitudArriendoService.getSolicitudArriendo();
     }
-    @PostMapping(path = "/GuardarSolicitudArriendo")
+    @PostMapping(path = "/CrearSolicitudArriendo")
     public void guardarSolicitudArriendo(@RequestBody SolicitudArriendo solicitudArriendo) {
         System.out.println("mi SolicitudArriendo es: " + solicitudArriendo);
         solicitudArriendoService.saveSolicitudArriendo(solicitudArriendo);

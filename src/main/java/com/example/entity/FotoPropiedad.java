@@ -19,10 +19,9 @@ public class FotoPropiedad {
 
     private String nombreArchivo;
 
-    
+    /* 
     @ManyToOne
-    private Propiedad propiedad;
-
+    private Propiedad propiedad;*/
 
     public FotoPropiedad() {
     }
