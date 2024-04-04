@@ -4,8 +4,11 @@ import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -36,6 +39,21 @@ public class PropiedadController {
 	public void guardarpropiedad(@RequestBody Propiedad propiedad) {
         System.out.println("mi propiedad es: " + propiedad);
         propiedadService.savepropiedad(propiedad);
+    }
+
+    @DeleteMapping(path = "/{idPropiedad}")
+    public void eliminarpropiedad(
+        @PathVariable("idPropiedad") Long id){
+        propiedadService.eliminarPropiedad(id);
+    }
+
+
+    @PutMapping(path = "/{idPropiedad}")
+    public Propiedad actualizarpropiedad(
+        @PathVariable("idPropiedad") Long id,
+        @RequestBody Propiedad propiedad){
+        propiedadService.actualizarPropiedad(id, propiedad);
+        return propiedad;
     }
 
 

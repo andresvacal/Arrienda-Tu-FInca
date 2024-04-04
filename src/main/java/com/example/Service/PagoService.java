@@ -25,6 +25,14 @@ public class PagoService {
         System.out.println("mi Pago es: " + pago);
         pagoRepository.save(pago);
     }
-    
+    public void eliminarPago(Long id) {
+        boolean exists = pagoRepository.existsById(id);
+        if (!exists) {
+            throw new IllegalStateException(
+                "Pago con id " + id + " no existe"
+            );
+        }
+        pagoRepository.deleteById(id);
+    }
 
 }

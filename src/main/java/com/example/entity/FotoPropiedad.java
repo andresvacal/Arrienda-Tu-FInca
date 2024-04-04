@@ -24,4 +24,8 @@ public class FotoPropiedad {
     private Propiedad propiedad;
 
 
+    public FotoPropiedad() {
+    }
+
+
 }

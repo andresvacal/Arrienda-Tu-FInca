@@ -70,6 +70,7 @@ public String toString() {
 @ManyToOne
 private Arrendador arrendador;
     
+
 @OneToMany(mappedBy = "propiedad")
     private List<FotoPropiedad> fotos;
 public Propiedad() {

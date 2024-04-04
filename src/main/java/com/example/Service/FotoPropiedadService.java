@@ -23,4 +23,21 @@ public class FotoPropiedadService {
         System.out.println("mi FotoPropiedad es: " + fotoPropiedad);
         fotoPropiedadRepository.save(fotoPropiedad);
     }
+    public void eliminarFotoPropiedad(Long id) {
+        boolean exists = fotoPropiedadRepository.existsById(id);
+        if (!exists) {
+            throw new IllegalStateException(
+                "FotoPropiedad con id " + id + " no existe"
+            );
+        }
+        fotoPropiedadRepository.deleteById(id);
+    }
+    public void actualizarFotoPropiedad(Long id, FotoPropiedad fotoPropiedad) {
+        FotoPropiedad fotoPropiedadActual = fotoPropiedadRepository.findById(id)
+            .orElseThrow(() -> new IllegalStateException(
+                "FotoPropiedad con id " + id + " no existe"
+            ));
+        fotoPropiedadActual.setNombreArchivo(fotoPropiedad.getNombreArchivo());
+        fotoPropiedadRepository.save(fotoPropiedadActual);
+    }
 }
