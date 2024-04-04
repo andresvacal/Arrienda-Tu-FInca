@@ -16,7 +16,7 @@ import com.example.entity.SolicitudArriendo;
 @CrossOrigin(origins = "*")
 
 @RestController
-@RequestMapping(path = "/solictudaArriendo")
+@RequestMapping(path = "/grupo27/solictudaArriendo")
 public class SolicitudArriendoController {
 
 

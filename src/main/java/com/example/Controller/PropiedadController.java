@@ -19,7 +19,7 @@ import com.example.entity.Propiedad;
 @CrossOrigin(origins = "*")
 
 @RestController
-@RequestMapping(path = "/propiedad")
+@RequestMapping(path = "/grupo27/propiedad")
 public class PropiedadController {
 
         private PropiedadService propiedadService;

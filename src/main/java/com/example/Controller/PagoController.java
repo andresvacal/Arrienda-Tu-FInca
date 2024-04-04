@@ -20,7 +20,7 @@ import com.example.entity.Pago;
 @CrossOrigin(origins = "*")
 
 @RestController
-@RequestMapping(path = "/pago")
+@RequestMapping(path = "/grupo27/pago")
 public class PagoController {
 private final PagoService pagoService;
 

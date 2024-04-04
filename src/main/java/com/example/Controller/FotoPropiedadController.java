@@ -21,7 +21,7 @@ import com.fasterxml.jackson.databind.annotation.JsonAppend.Prop;
 @CrossOrigin(origins = "*")
 
 @RestController
-@RequestMapping(path = "/fotoPropiedad")
+@RequestMapping(path = "/grupo27/fotoPropiedad")
 public class FotoPropiedadController {
  private FotoPropiedadService fotoPropiedadService;
     
