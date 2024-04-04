@@ -52,5 +52,13 @@ public class InterfaceController {
 	public String despliegue() {
 		return "index";
 	}
+	@GetMapping(path = "/jpa")
+	public String jpa() {
+		return "JPA";
+	}
+	@GetMapping(path = "/sonar")
+	public String sonarcube() {
+		return "Sonarcube";
+	}
  
 }

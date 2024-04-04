@@ -5,6 +5,7 @@ import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.example.Service.FormularioService;
@@ -16,7 +17,7 @@ import com.example.entity.Formulario;
 @CrossOrigin(origins = "*")
 
 @RestController
-//@RequestMapping(path = "/grupo27")
+@RequestMapping(path = "/grupo27/Formulario")
 public class WebController {
 
     private FormularioService formularioService;

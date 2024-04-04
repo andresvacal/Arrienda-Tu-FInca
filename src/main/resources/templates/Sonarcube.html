@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Casos de Prueba - Frontend</title>
+    <link rel="shortcut icon" href="favicon.ico">
+    
+    <!-- External stylesheets -->
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/html5-boilerplate.css">
+    <link rel="stylesheet" href="css/main.css">
+    <style>
+        body {
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #3498db;
+            color: #ecf0f1;
+            padding: 20px;
+            text-align: center;
+        }
+        .test-case {
+            margin: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+        }
+        h2, h3 {
+            color: #3498db;
+        }
+        h1{
+            color: #ecf0f1;
+
+        } 
+        .api-info {
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+        }
+        footer {
+            background-color: #34495e;
+            color: #ecf0f1;
+            padding: 10px;
+            text-align: center;
+        }
+        @media only screen and (max-width: 480px) {
+            body, header, .test-case, footer {
+                padding: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>SonarCube</h1>
+    </header>
+<!-- Sección de presentación del equipo -->
+
+    <section class="test-case">
+        <h2>Error de autenticación</h2>
+        <div class="api-info">
+            <p>Registro detallado de ejecución de proceso de construcción y análisis estático de código: El análisis falla debido a un error de autenticación. El mensaje de error indica que no se ha proporcionado la autorización adecuada para acceder a SonarQube. Pide verificar el token de usuario en la propiedad 'sonar.token' o las credenciales en las propiedades 'sonar.login' y 'sonar.password'.</p>
+        </div>
+
+        <h2>Fin de la construcción con error</h2>
+        <div class="api-info">
+            <p>La construcción del proyecto finaliza con un error. Maven informa que el proceso ha fallado debido al error de autenticación mencionado anteriormente.</p>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Desarrollo de Software - Universidad Javeriana</p>
+    </footer>
+</body>
+</html>

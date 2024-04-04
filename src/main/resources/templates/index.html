@@ -564,6 +564,55 @@ header p {
     
 </section>
 
+
+
+
+<!-- Sección de despliegue -->
+<section>
+    <h2>JPA, SonarQube Y Correcciones (Entrega 2)</h2>
+    <!-- Textos realizados por el equipo -->
+    <!-- Versiones y formulario de contáctenos -->
+    <h3>JPA</h3>
+    <!-- Boton despliegue -->
+    <button type="button" onclick="redirectToJPA()">Abrir</button>
+    <div id="response-container10"></div>
+    
+    <script th:inline="javascript">
+        function redirectToJPA() {
+            // Redirect to jpa.html
+            window.location.href = "/grupo27/jpa";
+        }
+    </script>
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <p id="successMessage"></p>
+        </div>
+    </div>
+
+    <h3>SonarQube</h3>
+    <button type="button" onclick="redirectToSonar()">Abrir</button>
+    <div id="response-container9"></div>
+    
+    <script th:inline="javascript">
+        function redirectToSonar() {
+            // Redirect to jpa.html
+            window.location.href = "/grupo27/sonar";
+        }
+    </script>
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <p id="successMessage"></p>
+        </div>
+    </div>
+
+
+
+</section>
+    
+</section>
+
 <!-- Pie de página -->
 <footer>
     <p>&copy; 2024 Grupo 7 - clase martes y jueves - 6:00PM - 8:00PM</p>
