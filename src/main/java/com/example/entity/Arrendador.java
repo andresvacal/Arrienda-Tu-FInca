@@ -41,6 +41,6 @@ public class Arrendador  {
     private List<Propiedad> propiedades;*/
 
     /*  @OneToMany(mappedBy = "arrendador")
-    private List<SolicitudArriendo> solicitudes;*/
-
+    private List<SolicitudArriendo> solicitudes;
+*/
 }
