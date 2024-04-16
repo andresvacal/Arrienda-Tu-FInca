@@ -33,7 +33,10 @@ public class PropiedadController {
     public List<Propiedad> getpropiedades() {
         return propiedadService.getPropiedades();
     }
-
+    @GetMapping(path = "/Verpropiedad/{idArrendador}")
+    public Propiedad getpropiedadesArrendador(@PathVariable Long idArrendador) {
+        return propiedadService.getPropiedad(idArrendador);
+    }
     //Rest de propiedades
     @PostMapping(path = "/GuardarPropiedad/{idArrendador}")
 	public void guardarpropiedad(@PathVariable Long idArrendador, @RequestBody Propiedad propiedad) {

@@ -28,6 +28,11 @@ public class PropiedadService {
     public List<Propiedad> getPropiedades() {
         return propiedadRepository.findAll();
     }
+
+    public Propiedad getPropiedad(Long id) {
+        return propiedadRepository.findById(id)
+                .orElseThrow(() -> new IllegalStateException("La propiedad con id " + id + " no existe"));
+    }
     
     public void savepropiedad(Long idArrendador,Propiedad propiedad) {
         System.out.println("mi propiedad a guardar: " + propiedad);
