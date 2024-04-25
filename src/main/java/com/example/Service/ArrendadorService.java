@@ -66,6 +66,7 @@ public class ArrendadorService {
     }
     public Arrendador login(Arrendador arrendador) {
         Optional<Arrendador> ArrendadorOptional = arrendadorRepository.findBycorreoElectronico(arrendador.getCorreoElectronico());
+        System.out.println("Usuario a iniciar sesion" + arrendador);
         if (ArrendadorOptional.isPresent()) {
             Arrendador arrendador1 = ArrendadorOptional.get();
             if (arrendador1.getPassword().equals(arrendador.getPassword())) {
