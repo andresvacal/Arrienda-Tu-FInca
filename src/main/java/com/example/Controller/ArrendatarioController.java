@@ -48,4 +48,8 @@ public class ArrendatarioController {
         arrendatarioService.actualizarArrendatario(id, arrendatario);
         return arrendatario;
     }
+    @PostMapping(path = "/login")
+    public Arrendatario login(@RequestBody Arrendatario arrendatario){
+        return arrendatarioService.login(arrendatario);
+    }
 }

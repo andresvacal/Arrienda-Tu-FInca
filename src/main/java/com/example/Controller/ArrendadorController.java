@@ -49,6 +49,9 @@ public class ArrendadorController {
         arrendadorService.actualizarArrendador(id, arrendador);
         return arrendador;
     }
-
+    @PostMapping(path = "/login")
+    public Arrendador login(@RequestBody Arrendador arrendador){
+        return arrendadorService.login(arrendador);
+    }
 
 }

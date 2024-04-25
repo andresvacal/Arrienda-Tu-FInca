@@ -64,5 +64,15 @@ public class ArrendadorService {
         }
         arrendadorRepository.save(arrendador1);
     }
+    public Arrendador login(Arrendador arrendador) {
+        Optional<Arrendador> ArrendadorOptional = arrendadorRepository.findBycorreoElectronico(arrendador.getCorreoElectronico());
+        if (ArrendadorOptional.isPresent()) {
+            Arrendador arrendador1 = ArrendadorOptional.get();
+            if (arrendador1.getPassword().equals(arrendador.getPassword())) {
+                return arrendador1;
+            }
+        }
+        return null;
+    }
 
 }
