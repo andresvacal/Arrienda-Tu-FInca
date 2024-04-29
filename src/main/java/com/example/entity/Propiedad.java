@@ -71,11 +71,12 @@ public String toString() {
 
 @ManyToOne
 private Arrendador arrendador;
-    
 
 @OneToMany(cascade = CascadeType.ALL)
 public List<FotoPropiedad> fotos;
 
+@OneToMany(cascade = CascadeType.ALL)
+public List<Resena> resenas;
 
 public Propiedad() {
 }

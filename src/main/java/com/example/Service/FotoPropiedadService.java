@@ -28,7 +28,6 @@ public class FotoPropiedadService {
     }
     public void saveFotoPropiedad(Long idPropiedad,FotoPropiedad fotoPropiedad) {
         System.out.println("mi FotoPropiedad es: " + fotoPropiedad);
-
         Propiedad propiedad = propiedadRepository.findByIdPropiedad(idPropiedad)
             .orElseThrow(() -> new IllegalStateException(
                 "Propiedad con id " + idPropiedad + " no existe"
