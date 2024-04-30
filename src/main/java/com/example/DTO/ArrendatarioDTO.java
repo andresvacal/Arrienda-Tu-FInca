@@ -1,8 +1,5 @@
 package com.example.DTO;
 
-
-import java.util.List;
-
 public class ArrendatarioDTO {
 
     private Long idArrendatario;

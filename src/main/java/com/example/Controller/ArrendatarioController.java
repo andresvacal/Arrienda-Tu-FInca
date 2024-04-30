@@ -27,6 +27,10 @@ public class ArrendatarioController {
     public ArrendatarioController(ArrendatarioService arrendatarioService) {
         this.arrendatarioService = arrendatarioService;
     }
+    @GetMapping(path = "/{idArrendatario}")
+    public Arrendatario getarrendatario(@PathVariable("idArrendatario") Long id) {
+        return arrendatarioService.getArrendatarioById(id);
+    }
     @GetMapping(path = "/Verarrendatarios")
     public List<Arrendatario> getarrendatarios() {
         return arrendatarioService.getArrendatarios();

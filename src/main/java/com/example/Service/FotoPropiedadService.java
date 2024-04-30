@@ -6,7 +6,6 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.example.Repository.ArrendatarioRepository;
 import com.example.Repository.FotoPropiedadRepository;
 import com.example.Repository.PropiedadRepository;
 import com.example.entity.FotoPropiedad;

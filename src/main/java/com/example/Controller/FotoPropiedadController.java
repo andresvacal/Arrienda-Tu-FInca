@@ -14,9 +14,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.example.Service.FotoPropiedadService;
-import com.example.Service.PropiedadService;
 import com.example.entity.FotoPropiedad;
-import com.fasterxml.jackson.databind.annotation.JsonAppend.Prop;
 
 @CrossOrigin(origins = "*")
 

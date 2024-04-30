@@ -75,5 +75,10 @@ public class ArrendadorService {
         }
         return null;
     }
-
+    public Arrendador getArrendorById(Long id) {
+        return arrendadorRepository.findById(id)
+                .orElseThrow(() -> new IllegalStateException(
+                        "El arrendador con id " + id + " no existe"
+                ));
+    }
 }

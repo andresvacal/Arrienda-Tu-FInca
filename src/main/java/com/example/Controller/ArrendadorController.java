@@ -53,5 +53,8 @@ public class ArrendadorController {
     public Arrendador login(@RequestBody Arrendador arrendador){
         return arrendadorService.login(arrendador);
     }
-
+    @GetMapping(path = "/{idArrendador}")
+    public Arrendador getArrendador(@PathVariable("idArrendador") Long id) {
+        return arrendadorService.getArrendorById(id);
+    }
 }

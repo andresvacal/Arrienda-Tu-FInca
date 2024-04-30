@@ -8,7 +8,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.example.Repository.ArrendatarioRepository;
-import com.example.Repository.FormularioRepository;
 import com.example.entity.Arrendatario;
 @Service
 public class ArrendatarioService {
@@ -34,6 +33,12 @@ public class ArrendatarioService {
         arrendatarioRepository.save(arrendatario);
     }
 
+    public Arrendatario getArrendatarioById(Long id) {
+        return arrendatarioRepository.findById(id)
+                .orElseThrow(() -> new IllegalStateException(
+                        "El arrendatario con id " + id + " no existe"
+                ));
+    }
     public void eliminarArrendatario(Long id) {
         boolean exists = arrendatarioRepository.existsById(id);
         if (!exists) {
