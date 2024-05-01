@@ -35,6 +35,11 @@ public class SolicitudArriendoController {
                 System.out.println("Vamos a mostrar las propiedades de: " + idArrendador);
                 return solicitudArriendoService.viewReservas(idArrendador);
     }
+    @GetMapping(path = "/Solicitud/{idSolicitud}")
+    public SolicitudArriendo verSolicitud(@PathVariable Long idSolicitud) {
+        return solicitudArriendoService.viewSolicitud(idSolicitud);
+    }
+
     @PostMapping(path = "/CrearSolicitudArriendo")
     public void guardarSolicitudArriendo(@RequestBody SolicitudArriendo solicitudArriendo) {
         System.out.println("mi SolicitudArriendo es: " + solicitudArriendo);

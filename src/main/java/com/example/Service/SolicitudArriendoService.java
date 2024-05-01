@@ -45,4 +45,13 @@ public class SolicitudArriendoService {
             );
         }
         solicitudArriendoRepository.deleteById(idSolicitud);}
+
+    public SolicitudArriendo viewSolicitud(Long idSolicitud) {
+
+        return solicitudArriendoRepository.findById(idSolicitud)
+            .orElseThrow(() -> new IllegalStateException(
+                    "SolicitudArriendo con id " + idSolicitud + " no existe"
+                ));
+    }
+
 }
