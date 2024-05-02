@@ -36,4 +36,6 @@ public class SolicitudArriendo {
 
     @ManyToOne
     private Arrendatario arrendatario;
+
+    
 }

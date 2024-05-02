@@ -1,6 +1,9 @@
 package com.example.Service;
 
 import java.util.List;
+
+import javax.print.event.PrintEvent;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -47,9 +50,13 @@ public void pagarReserva(Long idSolicitud,Long idArrendador, Long idArrendatario
     System.out.println("Pago de la solicitud: " + idSolicitud);
     
     SolicitudArriendo solicitud = solicitudArriendoRepository.findByIdSolicitud(idSolicitud);    
-    
-    if(solicitud.getEstado().equals("Pendiente")) {
+    System.out.println("Solicitud: " + solicitud);
+    System.out.println("El estado: " + solicitud.getEstado());
+
+    if(solicitud.getEstado().equals("pendiente")) {
         solicitud.setEstado("Pagado");
+        System.out.println("Solicitud: " + solicitud);
+
         solicitudArriendoRepository.save(solicitud);    
 
         // Fetch Arrendador and Arrendatario using their IDs from Pago object
