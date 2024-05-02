@@ -12,10 +12,10 @@ import lombok.Setter;
 @Entity
 public class Resena {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long idresena;
-    private float valorresena;
+    private Integer valorresena;
     private String textoresena;
+
     public Resena() {
     }
 }
