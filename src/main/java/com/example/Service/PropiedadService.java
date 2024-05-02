@@ -37,7 +37,7 @@ public class PropiedadService {
     public void savepropiedad(Long idArrendador,Propiedad propiedad) {
         System.out.println("mi propiedad a guardar: " + propiedad);
         
-Arrendador arrendador = arrendadorRepository.findByIdArrendador(idArrendador)
+Arrendador arrendador = arrendadorRepository.findById(idArrendador)
                 .orElseThrow(() -> new IllegalStateException("Arrendador con ese " + idArrendador + " not found"));
         propiedad.setArrendador(arrendador);
 

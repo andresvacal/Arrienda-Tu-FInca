@@ -25,12 +25,14 @@ public class Pago {
     @ManyToOne
     private Arrendatario arrendatario;
 
+    @ManyToOne
+    private Arrendador arrendador;
+
     @OneToOne
     private SolicitudArriendo solicitud;
 
     private double monto;
     private Date fechaPago;
     private String metodoPago;
-    private String estado;
-
+    //private String estado;
 }

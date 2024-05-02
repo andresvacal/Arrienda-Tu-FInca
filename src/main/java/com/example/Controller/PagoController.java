@@ -33,6 +33,11 @@ public PagoController(PagoService pagoService) {
 public List<Pago> getPagos() {
     return pagoService.getPagos();
 }
+@PostMapping(path = "/PagarReserva/{idSolicitud}/{idArrendador}/{idArrendatario}")
+public void pagarReserva(@RequestBody Pago pago, @PathVariable("idSolicitud") Long idSolicitud, @PathVariable("idArrendador") Long idArrendador, @PathVariable("idArrendatario") Long idArrendatario){
+    pagoService.pagarReserva(idSolicitud,idArrendador,idArrendatario, pago);
+}
+
 @PostMapping(path = "/GuardarPago")
 public void guardarPago(@RequestBody Pago pago) {
     System.out.println("mi Pago es: " + pago);
