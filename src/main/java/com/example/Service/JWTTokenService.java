@@ -9,9 +9,9 @@ import java.util.stream.Collectors;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.stereotype.Service;
 
+import com.example.DTO.ArrendadorDTO;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
-import co.edu.javeriana.security.jwt.dto.UsuarioDTO;
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.SignatureAlgorithm;
@@ -26,7 +26,7 @@ public class JWTTokenService {
     private long jwtExpiration = 99999999;
     private Key jwtKey = Keys.secretKeyFor(SignatureAlgorithm.HS512);; // You need to set this key appropriately
 
-    public String generarToken(UsuarioDTO usuario) {
+    public String generarToken(ArrendadorDTO usuario) {
 
         // byte[] secretBytes = secret.getBytes();
         // Key jwtKey = new SecretKeySpec(secretBytes, SignatureAlgorithm.HS512.getJcaName());
