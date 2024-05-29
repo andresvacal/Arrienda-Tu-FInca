@@ -1,13 +1,10 @@
-package co.edu.javeriana.security.jwt.dto;
-
+package com.example.DTO;
 import java.util.Calendar;
 import java.util.Date;
-
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
-
 @Getter
 @Setter
 @AllArgsConstructor
@@ -15,7 +12,7 @@ import lombok.Setter;
 public class TokenDTO {
 
     private String token;
-    private UsuarioDTO usuario;
+    private ArrendadorDTO usuario;
     
     public String getType(){
         return "Bearer ";

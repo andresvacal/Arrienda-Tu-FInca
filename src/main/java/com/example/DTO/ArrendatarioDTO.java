@@ -1,5 +1,14 @@
 package com.example.DTO;
 
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+
+@Getter
+@Setter
+@NoArgsConstructor
+@AllArgsConstructor
 public class ArrendatarioDTO {
 
     private Long idArrendatario;
@@ -7,26 +16,4 @@ public class ArrendatarioDTO {
     private String apellidos;
     private String correoElectronico;
     private String telefono;
-    private String password; // Include password cautiously due to security concerns
-
-    // Optional: List of related entities (consider lazy loading or DTOs for them)
-    // private List<SolicitudArriendoDTO> solicitudes;
-    // private List<PagoDTO> pagos;
-
-    // Getters and setters for all fields
-
-    // Optional: Constructor(s)
-    public ArrendatarioDTO() {
-    }
-
-    public ArrendatarioDTO(Long idArrendatario, String nombres, String apellidos, String correoElectronico, String telefono, String password) {
-        this.idArrendatario = idArrendatario;
-        this.nombres = nombres;
-        this.apellidos = apellidos;
-        this.correoElectronico = correoElectronico;
-        this.telefono = telefono;
-        this.password = password;
-    }
-
-    // ... getters and setters
-}
+    private String password; }
