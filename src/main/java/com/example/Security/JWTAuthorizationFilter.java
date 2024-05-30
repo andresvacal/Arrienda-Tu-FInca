@@ -11,8 +11,9 @@ import org.springframework.security.web.authentication.WebAuthenticationDetailsS
 import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
 import org.springframework.web.filter.OncePerRequestFilter;
-import com.example.Security.CustomUserDetailsService;
-import com.example.Security.JWTTokenService;
+
+import com.example.Service.JWTTokenService;
+
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.ExpiredJwtException;
 import io.jsonwebtoken.MalformedJwtException;
@@ -27,19 +28,12 @@ import jakarta.servlet.http.HttpServletResponse;
 @Component
 @Service
 public class JWTAuthorizationFilter extends OncePerRequestFilter{
-
-
     public static final String HEADER = "Authorization";
 	public static final String PREFIX = "Bearer ";
-
     @Autowired
 	private CustomUserDetailsService userDetailsService;
-
     @Autowired
     private JWTTokenService jwtTokenService;
-
-	
-
 	@Override
 	protected void doFilterInternal( @NonNull HttpServletRequest request, @NonNull HttpServletResponse response, @NonNull FilterChain chain) throws ServletException, IOException {
 		System.out.println( "-------->>>-------->>> Filtro"  );
