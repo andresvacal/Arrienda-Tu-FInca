@@ -12,20 +12,21 @@ import org.springframework.web.bind.annotation.RestController;
 import com.example.DTO.ArrendadorDTO;
 import com.example.DTO.TokenDTO;
 import com.example.Service.JWTTokenService;
-
+@CrossOrigin(origins = "*")
 @RestController
-@RequestMapping(value = "/jwt/security/autenticar")
+@RequestMapping(path = "/jwt/security/autenticar")
 public class AutenticacionController {
 
     @Autowired
     JWTTokenService jwtTokenService;
     @CrossOrigin
-    @PostMapping(  value = "/autenticar", produces = MediaType.APPLICATION_JSON_VALUE)
+    @PostMapping(  path = "/autenticar")
+
     public TokenDTO autenticar( @RequestBody ArrendadorDTO usuarioDTO ){
         return new TokenDTO(jwtTokenService.generarToken(usuarioDTO), usuarioDTO);
     }
     @CrossOrigin
-    @PostMapping(  value = "/autenticar-correo-contrasena", produces = MediaType.APPLICATION_JSON_VALUE)
+    @PostMapping(  path = "/autenticar-correo-contrasena")
     public String autenticar( @RequestParam String correo, @RequestParam String contrasena ){
         Long id = 1L;
         String nombres = "Juan";

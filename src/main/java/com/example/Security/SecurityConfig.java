@@ -46,7 +46,17 @@ public class SecurityConfig implements ISecurityConfig {
             new AntPathRequestMatcher("/jwt/security/autenticar/**", "GET"),
             new AntPathRequestMatcher("/jwt/security/autenticar/**", "POST"),
             new AntPathRequestMatcher("/jwt/security/autenticar/**", "PUT"),
-            new AntPathRequestMatcher("/jwt/security/autenticar/**", "DELETE")
+            new AntPathRequestMatcher("/jwt/security/autenticar/**", "DELETE"),
+            new AntPathRequestMatcher("/grupo27/arrendador/login", "GET"),
+            new AntPathRequestMatcher("/grupo27/arrendador/login", "POST"),
+            new AntPathRequestMatcher("/grupo27/arrendador/login", "PUT"),
+            new AntPathRequestMatcher("/grupo27/arrendador/login", "DELETE"),
+            new AntPathRequestMatcher("/grupo27/arrendador/GuardarArrendador", "GET"),
+            new AntPathRequestMatcher("/grupo27/arrendador/GuardarArrendador", "POST"),
+            new AntPathRequestMatcher("/grupo27/arrendador/GuardarArrendador", "PUT"),
+            new AntPathRequestMatcher("/grupo27/arrendador/login", "DELETE")
+            
+            
         );
     }
 }
