@@ -14,12 +14,33 @@ import org.springframework.security.web.authentication.UsernamePasswordAuthentic
 import org.springframework.security.web.util.matcher.AntPathRequestMatcher;
 import org.springframework.security.web.util.matcher.OrRequestMatcher;
 import org.springframework.security.web.util.matcher.RequestMatcher;
+import org.springframework.web.cors.CorsConfiguration;
+import org.springframework.web.cors.UrlBasedCorsConfigurationSource;
+import org.springframework.web.filter.CorsFilter;
 
 @Configuration
 @EnableWebSecurity
 public class SecurityConfig implements ISecurityConfig {
     @Autowired
     private JWTAuthorizationFilter jwtAuthorizationFilter;
+
+
+     @Bean
+    public CorsFilter corsFilter() {
+        UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();
+        CorsConfiguration config = new CorsConfiguration();
+        config.setAllowCredentials(true);
+        config.addAllowedOrigin("http://localhost:4200"); // Permite solicitudes desde Angular en localhost:4200
+        config.addAllowedHeader("*"); // Permite todos los encabezados
+        config.addAllowedHeader("Authorization");
+        config.addAllowedMethod("POST");
+        config.addAllowedMethod("GET"); // Asegúrate de incluir GET
+         // Asegúrate de incluir POST
+        config.addAllowedMethod("PUT"); // Incluye otros métodos según sea necesario
+        config.addAllowedMethod("DELETE"); // Permite todos los métodos
+        source.registerCorsConfiguration("/**", config); // Aplica la configuración CORS a todas las rutas
+        return new CorsFilter(source);
+    }
 	@Override
     @Bean
 	public PasswordEncoder passwordEncoder() {
@@ -55,7 +76,8 @@ public class SecurityConfig implements ISecurityConfig {
             new AntPathRequestMatcher("/grupo27/arrendador/GuardarArrendador", "POST"),
             new AntPathRequestMatcher("/grupo27/arrendador/GuardarArrendador", "PUT"),
             new AntPathRequestMatcher("/grupo27/arrendador/login", "DELETE")
-            
+          
+
             
         );
     }
